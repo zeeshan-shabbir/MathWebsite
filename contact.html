@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ku-logo.png" type="image/icon type">
+    <!-- animates on scroll -->
+    <link rel="stylesheet" href="./libaries/aos-master/dist/aos.css">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="./libaries/fontawesome-free-5.15.3-web/css/all.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utlities.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Department of Mathematics - University of Karachi</title> 
+    <style>
+        .contact-wrapper>div:not(:first-child) {
+            padding: 65px 0px;
+            border-bottom: 2px solid black;
+        }
+
+        .contact-heading {
+            margin: 40px 0px !important;
+        }
+
+        .math-map,
+        .phone-icon,
+        .email,
+        .javed-phone {
+            width: 40%;
+            margin-left: 4% !important;
+        }
+
+        .phone-icon {
+            margin: auto 0;
+        }
+
+        iframe {
+            height: 200px
+        }
+
+        .address,
+        .phone-number,
+        .email-icon,
+        .javed-phone-icon {
+            width: 40%;
+            margin-right: 7%;
+        }
+
+        .address-marker,
+        .phone-icon>span,
+        .email-icon>span,
+        .javed-phone-icon>span {
+            padding-right: 15px;
+        }
+
+        .address-text,
+        .tel-numbers,
+        .email-javed,
+        .phone-no-javed {
+            font-size: 25px;
+        }
+
+        .email-javed,
+        .phone-no-javed {
+            transform: translateY(45px);
+        }
+
+        .tel-numbers a,
+        .email-javed a,
+        .phone-no-javed a {
+            display: inline-block;
+            color: var(--primary);
+        }
+
+        .tel-numbers a:hover,
+        .email-javed a:hover,
+        .phone-javed a:hover {
+            margin-left: 5px;
+            color: black;
+            text-decoration: underline;
+            transition: all .3s ease;
+        }
+
+        .tel-numbers a:not(:last-child) {
+            padding: 0px 0px 10px 7px;
+
+        }
+
+        .fa-map-marker-alt,
+        .fa-phone-alt,
+        .fa-envelope,
+        .fa-mobile-alt {
+            font-size: 8rem;
+        }
+
+        .staff-heading h1 {
+            margin: 40px 0px;
+            padding: 5px 100px;
+            font-size: 45px;
+        }
+
+        .staff-list {
+            margin-left: 80px;
+        }
+
+        .staff-name {
+            list-style-type: disclosure-closed !important;
+            padding: 10px 0px;
+        }
+
+        
+        @media screen and (max-width:800px) {
+            .address {
+                margin-right: 2%;
+
+            }
+
+            .address-text {
+                font-size: 20px;
+            }
+
+        }
+
+        @media screen and (max-width:630px) {
+
+            .phone-wrapper,
+            .javed-phone-wrapper {
+                padding: 40px 0px !important;
+                flex-direction: column;
+            }
+
+            .address-wrapper,
+            .email-wrapper {
+                padding: 40px 0px !important;
+                flex-direction: column-reverse;
+            }
+
+            .math-map,
+            .phone-icon,
+            .email,
+            .javed-phone,
+            .address,
+            .phone-number,
+            .email-icon,
+            .javed-phone-icon {
+                width: 90% !important;
+                margin: auto !important;
+            }
+
+            .phone-icon,
+            .address,
+            .email-icon,
+            .javed-phone-icon {
+                padding-bottom: 45px;
+            }
+
+            .email-javed,
+            .phone-no-javed {
+                transform: translateY(0px);
+            }
+
+            .fa-map-marker-alt,
+            .fa-phone-alt,
+            .fa-envelope,
+            .fa-mobile-alt {
+                font-size: 5rem;
+            }
+
+            .staff-heading h1 {
+                margin: 25px 0px;
+                padding: 5px 0px;
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+
+    <header class="header capitalize " id="top">
+
+        <div class="container-100 fixed containerfixed">
+            <div id="Sidenav" class="sidenav">
+                <a class="closebtn">
+                    <i class="fas fa-times"></i>
+                </a>
+
+                <ul class="sidenav-list">
+                    <li class="side-item">
+                        <a href="./index.html" class="side-link ">home</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./result.html" class="side-link">results</a>
+                    </li>
+                    <li class="side-item dropdown ">
+                        <a href="javascript:void(0)" class="side-link"><span class="program-nav">programs</span> <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="./program.html">B.S In Financial Mathematics</a></li>
+                                <li><a href="./program.html">B.S In Computational Mathematics</a></li>
+                                <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                            </ul>
+                        
+
+                    </li>
+                    <li class="side-item">
+                        <a href="./faculty.html" class="side-link">faculty</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./news.html" class="side-link ">News</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./events.html" class="side-link">Events</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./gallery.html" class="side-link">Gallery</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./contact.html" class="side-link active">contact/staff</a>
+                    </li>
+
+                </ul>
+                <div class="footer-col footer-social-link" id="side-social-list">
+                    <h4 class="side-follow">follow us</h4>
+                    <div class="social-links" id="side-social">
+                        <a href="https://www.facebook.com/groups/416373102043603/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="navcontainer">
+                <nav class="navbar flex align-center justify-between  ">
+                    <button type="button" id="mobile-nav-toggle">
+                        <i class="fas fa-bars" id="navtext"></i>
+                    </button>
+                    <div class="mathlogo uppercase flex align-center">
+                        <a href="https://www.uok.edu.pk/" target="_blank" class="logo-link ">
+                            <img src=".//ku-logo.png" alt="ku-logo" width="85px">
+                        </a>
+                        <span>Department of <br> <b class="math-logo-text">mathematics</b></span>
+                    </div>
+                    <div id="navbar-collapse">
+                        <ul class="navbar-nav flex">
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./index.html">home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./news.html">news</a>
+                            </li>
+                            <li class="nav-item dropdown" >
+                                <a class="nav-link" href="javascript:void(0)"><span class="program-nav">programs</span>
+                                    <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                                <ul class="dropdown-content">
+                                    <li><a href="#fm">B.S In Financial Mathematics</a></li>
+                                    <li><a href="#cm">B.S In Computational Mathematics</a></li>
+                                    <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./faculty.html">faculty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./result.html">result</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./events.html">events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./gallery.html">gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./contact.html">contact/staff</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="back-to-top ">
+                <a href="#top" class="back-to-top-link">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
+            </div>
+            <div class="go-to-bottom">
+                <a href="#bottom" class="go-to-bottom-link">
+                    <i class="fas fa-arrow-circle-down"></i>
+                </a>
+            </div>
+            <div class="progress-container">
+                <div class="progress" id="myBar"></div>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="container-100">
+        <div class="contact-wrapper">
+            <div class="contact-heading center">
+                <h1>contact us </h1>
+            </div>
+            <div class="address-wrapper flex justify-between">
+                <div class="math-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d904.4381913326403!2d67.122222!3d24.940491!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2a8911afd016fbe!2sMathematics%20Department!5e0!3m2!1sen!2sus!4v1619209038120!5m2!1sen!2sus"
+                        width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="address flex justify-center align-center">
+                    <span class="address-marker">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span class="address-text">
+                        Department of Mathematics <br> Karachi University, Karachi.
+                    </span>
+                </div>
+
+            </div>
+            <div class="phone-wrapper flex justify-between">
+                <div class="phone-icon center">
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                </div>
+                <div class="phone-number center">
+                    <p class="tel-numbers">
+
+                        <a href="tel:00922199261301">0092 21 99261301</a>
+                        <a href="tel:00922199261302">0092 21 99261302</a>
+                        <a href="tel:00922199261303">0092 21 99261303</a>
+                        <a href="tel:00922199261304">0092 21 99261304</a>
+                        <a href="tel:00922199261305">0092 21 99261305</a>
+                        <a href="tel:00922199261306">0092 21 99261306</a>
+                        <a href="tel:0092 21 9926229">0092 21 9926229</a>
+                    </p>
+                </div>
+            </div>
+            <div class="email-wrapper flex justify-between">
+                <div class="email center">
+                    <p class="email-javed"><a href="mailto:javedsaeedmku@gmail.com">javedsaeedmku@gmail.com</a></p>
+                </div>
+                <div class="email-icon center">
+                    <span>
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+
+            </div>
+            <div class="javed-phone-wrapper flex justify-between">
+                <div class="javed-phone-icon center">
+                    <span>
+                        <i class="fas fa-mobile-alt"></i>
+                    </span>
+                </div>
+                <div class="javed-phone center">
+                    <p class="phone-no-javed"><a href="mailto:javedsaeedmku@gmail.com">+92 322 2201971</a></p>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="staff-wrapper">
+            <div class="staff-box">
+                <div class="staff-heading center">
+                    <h1><span><i class="fas fa-user-tie"></i></span>&nbsp; <span class="staff">staff</span></i></h1>
+                </div>
+                <ul class="staff-list">
+                    <li class="staff-name">
+                        Mr. Javed Saeed - UDC
+                    </li>
+                    <li class="staff-name">
+                        Mr. Aziz Hussain - UDC
+                    </li>
+                    <li class="staff-name">
+                        Mr. Junaid Tahir - Computer Operator
+                    </li>
+                    <li class="staff-name">
+                        Mr. Rizwan Farooq - C.C.T
+                    </li>
+                    <li class="staff-name">
+                        Mr. Shabbir Ahmed - Lab. Assistant
+                    </li>
+                    <li class="staff-name">
+                        Mr. Zeeshan Khan - Lab. Assistant
+                    </li>
+                    <li class="staff-name">
+                        Mr. Noor Hassan Gabol - Lab. Assistant
+                    </li>
+                    <li class="staff-name">
+                        Mr. Asif Khan - Lab. Assistant
+                    </li>
+                    <li class="staff-name">
+                        Mr. Muhammad Aslam - Lab. Attendant
+                    </li>
+                    <li class="staff-name">
+                        Ms. Shab E Noor - Lab. Attendant
+                    </li>
+                    <li class="staff-name">
+                        Ms. Amna Sana - Seminar Librarian
+                    </li>
+                    <li class="staff-name">
+                        Mr. Sadakat Ali - Messenger
+                    </li>
+                    <li class="staff-name">
+                        Mr. Maqsood Hussain - Messenger
+                    </li>
+                    <li class="staff-name">
+                        Mr. Allah Rakha - Sanitary Worker
+                    </li>
+                    <li class="staff-name">
+                        Mr. Sadiq Masih - Sanitary Worker
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="row flex  justify-evenly">
+            <div class="footer-col mission-col ">
+                <h4>mathematics</h4>
+                <p class="misson-footer-para">
+                    The mission of the department is to serve the country and wider international community in the
+                    development and communication of Mathematics through high quality research, publication and
+                    training
+                    at both undergraduate and postgraduate levels..
+                </p>
+            </div>
+            <div class="footer-links-wrapper flex justify-between">
+
+
+                <div class="footer-col footer-link">
+                    <h4>quick link</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">libary</a></li>
+                        <li><a href="#">download book</a></li>
+                        <li><a href="#">another link</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col footer-link">
+                    <h4>contact us</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-col footer-social-link">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright center">
+            <p> &copy; Copyrights Department of Mathematics. All rights reserved.</p>
+            <p>Designed &amp; Developed by <a href="https://www.facebook.com/Zeeehope" target="_blank">Zeeshan
+                    Shabbir</a>
+            </p>
+        </div>
+
+    </footer>
+    <!-- header end here -->
+    <script src="./libaries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./libaries/aos-master/dist/aos.js"></script>
+    <script src="./jss/nav.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 100,
+            duration: 1000,
+            startEvent: 'load',
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ku-logo.png" type="image/icon type">
+    <!-- aos -->
+    <link rel="stylesheet" href="./libaries/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="./libaries/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utlities.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+    <title>Department of Mathematics - University of Karachi</title>    
+    <style>
+        .faculty {
+            margin-bottom: 40px;
+            border: none;
+        }
+
+        .faculty-heading {
+            margin: 40px 0 !important;
+            padding: 0;
+            font-size: 40px !important;
+        }
+
+        .desgination-heading h1 {
+            font-family: var(--primary-font) !important;
+            margin: 20px 0px;
+            box-shadow: 0px 6px 6px 2px #888888;
+            padding: 10px 5px;
+            font-size: 25px;
+            border: 2px solid black;
+        }
+
+        .fac-search {
+            text-align: right;
+            margin-right: 15px;
+        }
+
+        #fac-btn {
+            padding: 8px 5px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="loader"></div>
+    <header class="header capitalize " id="top">
+
+        <div class="container-100 fixed containerfixed">
+            <div id="Sidenav" class="sidenav">
+                <a class="closebtn">
+                    <i class="fas fa-times"></i>
+                </a>
+
+                <ul class="sidenav-list">
+                    <li class="side-item">
+                        <a href="./index.html" class="side-link ">home</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./result.html" class="side-link">results</a>
+                    </li>
+                    <li class="side-item dropdown ">
+                        <a href="javascript:void(0)" class="side-link"><span class="program-nav">programs</span> <i
+                                class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="./program.html">B.S In Financial Mathematics</a></li>
+                            <li><a href="./program.html">B.S In Computational Mathematics</a></li>
+                            <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                            <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                            <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                            <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                        </ul>
+
+
+                    </li>
+                    <li class="side-item">
+                        <a href="./faculty.html" class="side-link active">faculty</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./news.html" class="side-link ">News</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./events.html" class="side-link">Events</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./gallery.html" class="side-link">Gallery</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./contact.html" class="side-link">contact/staff</a>
+                    </li>
+
+                </ul>
+                <div class="footer-col footer-social-link" id="side-social-list">
+                    <h4 class="side-follow">follow us</h4>
+                    <div class="social-links" id="side-social">
+                        <a href="https://www.facebook.com/groups/416373102043603/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="navcontainer">
+                <nav class="navbar flex align-center justify-between  ">
+                    <button type="button" id="mobile-nav-toggle">
+                        <i class="fas fa-bars" id="navtext"></i>
+                    </button>
+                    <div class="mathlogo uppercase flex align-center">
+                        <a href="https://www.uok.edu.pk/" target="_blank" class="logo-link ">
+                            <img src=".//ku-logo.png" alt="ku-logo" width="85px">
+                        </a>
+                        <span>Department of <br> <b class="math-logo-text">mathematics</b></span>
+                    </div>
+                    <div id="navbar-collapse">
+                        <ul class="navbar-nav flex">
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./index.html">home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./news.html">news</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="javascript:void(0)"><span class="program-nav">programs</span>
+                                    <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                                <ul class="dropdown-content">
+                                    <li><a href="#fm">B.S In Financial Mathematics</a></li>
+                                    <li><a href="#cm">B.S In Computational Mathematics</a></li>
+                                    <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./faculty.html">faculty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./result.html">result</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./events.html">events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./gallery.html">gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">contact/staff</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="back-to-top ">
+                <a href="#top" class="back-to-top-link">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
+            </div>
+            <div class="go-to-bottom">
+                <a href="#bottom" class="go-to-bottom-link">
+                    <i class="fas fa-arrow-circle-down"></i>
+                </a>
+            </div>
+            <div class="progress-container">
+                <div class="progress" id="myBar"></div>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- header end here -->
+    <section class="sec-faculty">
+        <div class="container">
+            <div class="container-100">
+                <div class="faculty-heading center">
+                    <h1>faculty</h1>
+                </div>
+                <div class="fac-search">
+
+                    <input id="fac-input" type="text" placeholder="Search..">
+                    <input type="button" value="search" class="btn" id="fac-btn">
+                </div>
+                <div id="fac-wrapper">
+                    <div class="desgination-heading center">
+                        <h1>chairperson</h1>
+                    </div>
+                    <div class="faculty flex justify-center flexwrap ">
+                        <div class="faculty-person-box center">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Dr-najeeb-alam-khan.jpg" alt="Dr-najeeb-alam-khan"
+                                    class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    dr najeeb alam
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Chairman / Associate Professor</span>
+                                    <span>Non-linear Mechanics, Fractional Differential Equation, Fuzzy Differential
+                                        Equations</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr Najeeb Alam.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desgination-heading center">
+                        <h1>Assistant Professors</h1>
+                    </div>
+                    <div class="faculty flex justify-between flexwrap ">
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Mushtaq Ahmed.jpg" alt="Mushtaq Ahmed" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR Mushtaq Ahmed
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Fluid Dynamics, Differential Equation, Classical Mechanics</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Mushtaq Ahmed.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Javed Ansari.jpg" alt="Javed Ansari" class="faculty-img">
+                                <span class="education"><b>M.phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MR Javed Ansari
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Electromagnetism, Differential Geomatery, Mechanics</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Javed Ansari.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Waseem Khan.jpg" alt="Waseem Khan" class="faculty-img">
+                                <span class="education"><b>M.phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MR. WASEEM AHMED KHAN
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Fluid Dynamics, Differential Equation</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Waseem Ahmed Khan.html"
+                                        class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Sadia Zia.jpg" alt="Sadia Zia" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR . SYEDA SADIA ZIA
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Fluid Dynamics, Analysis</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Syeda Sadia Zia.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Waseem Ansari.jpg" alt="Waseem Ansari" class="faculty-img">
+                                <span class="education"><b>M.phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    Mr. Waseem Ansari
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Algebra, Data Analysis</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Waseem Ansari.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Asif Raza.jpg" alt="DR. ASIF RAZA KHAN" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. ASIF RAZA KHAN
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Assistant Professor & HEC Approved Ph.D Supervisor</span>
+                                    <span>Mathermatical Inequalities and Applications, Convex Analysis, Numerical
+                                        Integration, Time Scale</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Asif Raza.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/S Inayat.jpg" alt="DR. SYED INAYATULLAH" class="faculty-img">
+                                <span class="education"><b>Mph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. SYED INAYATULLAH
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Operation Search, Linear Programming</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Syed Inayatullah.html"
+                                        class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/M Imtiaz.jpg" alt="DR. MUHAMMAD IMTIAZ" class="faculty-img">
+                                <span class="education"><b>M.phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. MUHAMMAD IMTIAZ
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Operation Search, Fluid Dynamics</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Muhammad Imtiaz.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Tanveer Ahmed.jpg" alt="DR. TANVEER AHMED SIDDIQUI"
+                                    class="faculty-img">
+                                <span class="education"><b>M.SC</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. TANVEER AHMED SIDDIQUI
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Computational Mathematics, Data Analysis</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Tanveer Ahmed.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Saba Naz.jpeg" alt="DR. SABA NAZ" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. SABA NAZ
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Data Analysis, Differential Geomatery</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Saba Naz.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Fozia Hanif.jpg" alt="DR. FOZIA HANIF" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. FOZIA HANIF
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Operation Search</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr.Fozia Hanif.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Saqib ur Rehman.jpg" alt="DR. SAQIB-UR-REHMAN"
+                                    class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. SAQIB-UR-REHMAN
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Mathematical and Statistical Modeling Climate Dynamics, Time Series Analysis
+                                    </span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Saqib-Ur-Rehman.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Ahmed Hasan.jpg" alt="DR. AHMED HASAN" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. AHMED HASAN
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Mathematical Modeling Climate Dynamics, Time Series Analysis</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Ahmed Hassan.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/M Ayaz.jpg" alt="DR. MUHAMMAD AYAZ" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    DR. MUHAMMAD AYAZ
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Associate Professor</span>
+                                    <span>Artificial Neural Networks, Algebra, Stochastic Modeling</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Dr. Muhammad Ayaz.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desgination-heading center">
+                        <h1>Lecturer</h1>
+                    </div>
+                    <div class="faculty flex justify-between flexwrap ">
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Shahid Sultan.jpg" alt="MR. SHAHID SULTAN"
+                                    class="faculty-img">
+                                <span class="education"><b>M.S.</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MR. SHAHID SULTAN
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Mathematical Analysis, Mathematical Physics, Abstract Algebra</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Shahid Sultan.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Asif Iqbal.jpg" alt="MR. ASIF IQBAL" class="faculty-img">
+                                <span class="education"><b>M.S.</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MR. ASIF IQBAL
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Mathematical Modeling, Stochastic Processes Time Series Analysis,
+                                        Climatology</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Asif Iqbal.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Asma Rani.jpg" alt="MS. ASMA RANI" class="faculty-img">
+                                <span class="education"><b>Ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. ASMA RANI
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Optimization Theory, Linear Algebra</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Asma Rani.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Hafsa Jafree.jpg" alt="MS. HAFSA ATHAR JAFREE"
+                                    class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. HAFSA ATHAR JAFREE
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Optimization Theory, Operations Research</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Hafsa Jafree.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Hina Zaheer.jpg" alt=" MS. HINA ZAHEER" class="faculty-img">
+                                <span class="education"><b>ph.D</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. HINA ZAHEER
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Data Structure, Operations Research</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Hina Zaheer.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Noor Fatima.jpg" alt="MS. NOOR FATIMA SIDDIQUI"
+                                    class="faculty-img">
+                                <span class="education"><b>M.S.</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. NOOR FATIMA SIDDIQUI
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Fractional Differential Equations, Operations Research</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Noor Fatima.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Mehwish Shafi.jpg" alt="MS. MEHWISH SHAFI KHAN"
+                                    class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. MEHWISH SHAFI KHAN
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Fluid Dynamics, Applied Mathematics</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Mehwish Shafi Khan.html"
+                                        class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Samreen Ahmed.jpg" alt="MS. SAMREEN AHMAD"
+                                    class="faculty-img">
+                                <span class="education"><b>M.S.</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. SAMREEN AHMAD
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Computational Mathematics , Numerical Analysis</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Samreen Ahmad.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Samera Jamil.jpg" alt="MS. SAMIRA SAHAR JAMIL"
+                                    class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. SAMIRA SAHAR JAMIL
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Bio-Mathematics</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Samira Sahar Jamil.html"
+                                        class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Aghzia Akram.jpg" alt="MS. AGHZIA AKRAM" class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    Ms. Aghzia Akram
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Polylogarithmic Groups</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Aghzia Akram.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Wajiha Riaz.jpg" alt="MS. WAJIHA RIAZ" class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. WAJIHA RIAZ
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Operations Research, Data Structures</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Wajiha Riaz.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Sumayya Saadi.jpg" alt="MS. SUMAYYAH SAADI"
+                                    class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MS. SUMAYYAH SAADI
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Mathematical Analysis, Functional Analysis</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Ms. Sumayyah Saadi.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Ateeq Razzaq.jpg" alt="MR. ATEEQ RAZZAK" class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MR. ATEEQ RAZZAK
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Operations Research, Data Analysis</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Ateeq Razzak.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Salman Safdar.jpg" alt="MR. SALMAN SAFDAR"
+                                    class="faculty-img">
+                                <span class="education"><b>M.S.</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MR. SALMAN SAFDAR
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Mathematical Biology, Dynamical Systems</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/Mr. Salman Safdar.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-person-box center" data-aos="fade-up">
+                            <div class="fac-img-box center ">
+                                <img src="./images/faculty/Usman Qureshi.jpeg" alt="MR. USMAN QURESHI"
+                                    class="faculty-img">
+                                <span class="education"><b>M.Phil</b></span>
+                            </div>
+                            <div class="faculty-intro">
+                                <h3 class="fac-name">
+                                    MR. USMAN QURESHI
+                                </h3>
+                                <p class="faculty-para">
+                                    <span>Lecturer</span>
+                                    <span>Astronomy</span>
+
+                                </p>
+                                <div class="center">
+                                    <a href="./faculty profile/usman quershi.html" class="btn fm-btn ">profile</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="row flex  justify-evenly">
+            <div class="footer-col mission-col ">
+                <h4>mathematics</h4>
+                <p class="misson-footer-para">
+                    The mission of the department is to serve the country and wider international community in the
+                    development and communication of Mathematics through high quality research, publication and training
+                    at both undergraduate and postgraduate levels..
+                </p>
+            </div>
+            <div class="footer-links-wrapper flex justify-between">
+
+
+                <div class="footer-col footer-link">
+                    <h4>quick link</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">libary</a></li>
+                        <li><a href="#">download book</a></li>
+                        <li><a href="#">another link</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col footer-link">
+                    <h4>contact us</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-col footer-social-link">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright center">
+            <p> &copy; Copyrights Department of Mathematics. All rights reserved.</p>
+            <p>Designed &amp; Developed by <a href="https://www.facebook.com/Zeeehope" target="_blank">Zeeshan
+                    Shabbir</a>
+            </p>
+        </div>
+
+    </footer>
+    <script src="./libaries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./libaries/aos-master/dist/aos.js"></script>
+    <script src="./jss/nav.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 70,
+            duration: 2000,
+            startEvent: 'load',
+
+        });
+    </script>
+    <script>
+        // $("#fac-btn").click(function () {
+        //     var input = $("#fac-input").val();
+        //     console.log(input);
+        //     $(".faculty-person-box ").hide();
+        //     $(".faculty").find('#' + input).show();
+        // })
+        $(document).ready(function () {
+            $("#fac-btn").click(function () {
+
+                var value = $('#fac-input').val();
+                if (value == "") {
+                    console.log("do nothing");
+
+                } else {
+                    $(".loader").show()
+                    $('#fac-input').val("");
+                    $('.desgination-heading').hide()
+                    $('.faculty-person-box').hide()
+                    $("footer").css('margin-top', '500px')
+                    setTimeout(() => {
+                        $('.faculty-person-box').each(function () {
+                            if ($(this).text().toUpperCase().indexOf(value.toUpperCase()) != -1) {
+                                $(".faculty-person-box").removeAttr("data-aos");
+                                $(".faculty").removeClass("justify-between")
+                                $(".faculty").addClass("justify-center");
+                                $(".loader").delay(1500).hide()
+                                $("footer").delay(1500).css('margin-top', '0px')
+                                $(this).show()
+                            } else {
+                                $(".loader").delay(1500).hide()
+                                $("footer").delay(1500).css('margin-top', '0px')
+                            }
+
+                        });
+                    }, 1500);
+                }
+            });
+
+
+        })
+    </script>
+</body>
+
+</html>

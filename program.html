@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ku-logo.png" type="image/icon type">
+    <!-- aos -->
+    <link rel="stylesheet" href="./libaries/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="./libaries/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utlities.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Department of Mathematics - University of Karachi</title>    
+    <style>
+        .program-heading-main h1::first-letter {
+            font-size: 80px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            margin: 10px 0px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 16px;
+            border: 1px solid black;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .first-year-table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        .first-year-table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        td a {
+            color: var(--primary);
+        }
+
+        .hidden-cell {
+            border: none;
+        }
+
+        .pro-list-item {
+            list-style-type: disc !important;
+        }
+
+        .course-type span {
+            color: white;
+            background: #ff4646;
+            padding: 10px;
+            margin: 10px 0px;
+            border-radius: 10px;
+
+        }
+
+        .program-link {
+            color: var(--primary);
+            padding: 10px 0px;
+            font-size: 20px;
+        }
+        .program-name{
+            padding: 10px 0px;
+            font-size: 20px;
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        td a:hover,
+        .program-link:hover {
+            color: black;
+            padding-left: 5px;
+            text-decoration: underline;
+            transition: all .3s ease;
+        }
+
+        .total-Courses,
+        .total-hours {
+            text-decoration: underline;
+            font-size: 25px;
+            padding: 10px 0px;
+        }
+
+        .course-wrapper {
+            margin: 40px 0px;
+        }
+
+        @media screen and (max-width:1150px) {
+            .container {
+                width: 80%;
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width:850px) {
+            table {
+                font-size: 15px;
+            }
+
+            th,
+            td {
+                padding: 10px 5px;
+
+            }
+            .fourth-year-headings{
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .container {
+                width: 90%;
+            }
+
+            .year-heading {
+                font-size: 20px;
+            }
+
+            .total-Courses,
+            .total-hours {
+                font-size: 15px;
+            }
+            .fourth-year-tables{
+                width: 100% !important;
+            }
+            .fourth-year-headings{
+                font-size: 18px;
+            }
+
+            .program-heading-main h1::first-letter {
+                font-size: 40px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            tbody>tr>:nth-child(2) {
+                width: 80px !important;
+            }
+            tbody>tr>:nth-child(4) {
+                width: 48px;
+            }
+
+        }
+
+        @media screen and (max-width:450px) {
+            table {
+                /* font-size: 10px; */
+                width: auto;
+            }
+            .course-type span {
+                font-size: 12px;
+            }
+
+            .program-link,.program-name {
+                font-size: 15px;
+            }
+
+            .semester-heading{
+                font-size: 20px;
+            }
+            .fourth-year-headings{
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width:325px) {
+            .container {
+                width: 100%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+
+    <header class="header capitalize " id="top">
+
+        <div class="container-100 fixed containerfixed">
+            <div id="Sidenav" class="sidenav">
+                <a class="closebtn">
+                    <i class="fas fa-times"></i>
+                </a>
+
+                <ul class="sidenav-list">
+                    <li class="side-item">
+                        <a href="./index.html" class="side-link ">home</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./result.html" class="side-link">results</a>
+                    </li>
+                    <li class="side-item dropdown ">
+                        <a href="javascript:void(0)" class="side-link active"><span class="program-nav">programs</span> <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="./program.html">B.S In Financial Mathematics</a></li>
+                                <li><a href="./program.html">B.S In Computational Mathematics</a></li>
+                                <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                            </ul>
+                        
+
+                    </li>
+                    <li class="side-item">
+                        <a href="./faculty.html" class="side-link">faculty</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./news.html" class="side-link ">News</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./events.html" class="side-link">Events</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./gallery.html" class="side-link">Gallery</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./contact.html" class="side-link">contact/staff</a>
+                    </li>
+
+                </ul>
+                <div class="footer-col footer-social-link" id="side-social-list">
+                    <h4 class="side-follow">follow us</h4>
+                    <div class="social-links" id="side-social">
+                        <a href="https://www.facebook.com/groups/416373102043603/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="navcontainer">
+                <nav class="navbar flex align-center justify-between  ">
+                    <button type="button" id="mobile-nav-toggle">
+                        <i class="fas fa-bars" id="navtext"></i>
+                    </button>
+                    <div class="mathlogo uppercase flex align-center">
+                        <a href="https://www.uok.edu.pk/" target="_blank" class="logo-link ">
+                            <img src=".//ku-logo.png" alt="ku-logo" width="85px">
+                        </a>
+                        <span>Department of <br> <b class="math-logo-text">mathematics</b></span>
+                    </div>
+                    <div id="navbar-collapse">
+                        <ul class="navbar-nav flex">
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./index.html">home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./news.html">news</a>
+                            </li>
+                            <li class="nav-item dropdown" >
+                                <a class="nav-link active" href="javascript:void(0)"><span class="program-nav">programs</span>
+                                    <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                                <ul class="dropdown-content">
+                                    <li><a href="#fm">B.S In Financial Mathematics</a></li>
+                                    <li><a href="#cm">B.S In Computational Mathematics</a></li>
+                                    <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./faculty.html">faculty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./result.html">result</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./events.html">events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./gallery.html">gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">contact/staff</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="back-to-top ">
+                <a href="#top" class="back-to-top-link">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
+            </div>
+            <div class="go-to-bottom">
+                <a href="#bottom" class="go-to-bottom-link">
+                    <i class="fas fa-arrow-circle-down"></i>
+                </a>
+            </div>
+            <div class="progress-container">
+                <div class="progress" id="myBar"></div>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- header end here -->
+    <section class="program-sec">
+        <div class="container">
+            <div class="program-wrapper">
+                <div class="program-heading-main center">
+                    <h1>program's</h1>
+                </div>
+                <div class="programs-math">
+                    <ul class="program-list">
+                        <li class="pro-list-item">
+                            <a href="./Course Outlines/FM CM/Syl-Fin-Math-10.pdf" download class="program-link">B.S In Financial Mathematics</a>
+                        </li>
+                        <li class="pro-list-item">
+                            <a href="./Course Outlines/FM CM/BS-Comp-Math.docx.pdf" download class="program-link">B.S In Computational Mathematics</a>
+                        </li>
+                        <li class="pro-list-item">
+                            <a href="./Course Outlines/MPHIL.pdf" download class="program-link">M.S./M.Phil. In Pure And Applied Mathematics</a>
+                        </li>
+                        <li class="pro-list-item">
+                            <a href="./Course Outlines/PhD.pdf" download class="program-link">Ph.D. In Pure And Applied Mathematics</a>
+                        </li>
+                        <li class="pro-list-item">
+                           <span class="program-name"> BSc. (Hons) In Pure And Applied Mathematics</span> 
+                        </li>
+                        <li class="pro-list-item">
+                           <span class="program-name"> MSc. In Pure And Applied Mathematics</span> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="course-wrapper">
+                    <div class="sub-headings">
+                        <div class="center">
+                            <h1 class="year-heading">first year Course's</h1>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table first-year-table">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/301.pdf" download>MATH 301</a></td>
+                                <td>Algebra</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>301</td>
+                                <td>Sub - I</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>301</td>
+                                <td>Sub - II</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>300.1(E)</td>
+                                <td>English ( Compulsory )</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr class="last-row">
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell delete-cell"></td>
+                                <td class="credit-hours-cell center" colspan="2">Total Credit Hours = 12</td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="semester">
+                        <h2 class="semester-heading">second semester</h2>
+                    </div>
+                    <div class="course-table ">
+                        <table class="table first-year-table">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/302.pdf" download>MATH 302</a></td>
+                                <td>Calculus</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>302</td>
+                                <td>Sub - I</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>302</td>
+                                <td>Sub - II</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>300.2(I.S)</td>
+                                <td>
+                                    Islamic Studies ( Compulsory )</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr class="last-row">
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell delete-cell"></td>
+                                <td class="credit-hours-cell center" colspan="2">Total Credit Hours = 12</td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="total">
+                        <p class="total-Courses"> Total Number of Courses = 8</p>
+                        <p class="total-hours">Total Number of Credit hours = 24</p>
+                    </div>
+                </div>
+                <div class="course-wrapper">
+                    <div class="sub-headings">
+                        <div class="center">
+                            <h1 class="year-heading">second year Course's</h1>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">third semester</h2>
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/401.pdf" download>MATH 401</a></td>
+                                <td>Geometry</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/403.pdf" download></a>MATH 403</a></td>
+                                <td>Data Processing and Programming - I</td>
+                                <td>2+1</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>401</td>
+                                <td>Sub - I</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>401</td>
+                                <td>Sub - II</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>400.1</td>
+                                <td>Urdu (Compulsory )</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="last-row">
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell delete-cell"></td>
+                                <td class="credit-hours-cell center" colspan="2">Total Credit Hours = 15</td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="semester">
+                        <h2 class="semester-heading">fourth semester</h2>
+                    </div>
+                    <div class="course-table">
+                        <table class="table">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/402.pdf" download>MATH 402</a></td>
+                                <td>Mechanics </td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/404.pdf" download>MATH 404</a></td>
+                                <td>Data Processing and Programming - II</td>
+                                <td>2+1</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>402</td>
+                                <td>Sub - I</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>402</td>
+                                <td>Sub - II</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>400.2 (P.S)</td>
+                                <td>Pakistan Studies (Compulsory )</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="last-row">
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell delete-cell"></td>
+                                <td class="credit-hours-cell center" colspan="2">Total Credit Hours = 15</td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="total">
+                        <p class="total-Courses"> Total Number of Courses = 10</p>
+                        <p class="total-hours">Total Number of Credit hours = 30</p>
+                    </div>
+                </div>
+                <div class="course-wrapper">
+                    <div class="sub-headings">
+                        <div class="center">
+                            <h1 class="year-heading">third year Course's</h1>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">fifth semester</h2>
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/501.pdf" download>MATH 501</a></td>
+                                <td>Analysis - I</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/503.pdf" download>MATH 503</a></td>
+                                <td>Linear Algebra</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="./Course Outlines/505.pdf" download>MATH 505</a></td>
+                                <td>Numerical Analysis - I</td>
+                                <td>2+1</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="./Course Outlines/507.pdf" download>MATH 507</a></td>
+                                <td>Applicable Differential Geometry - I</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="./Course Outlines/509.pdf" download>MATH 509</a></td>
+                                <td>Methods of Mathematical Physics - I</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="last-row">
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell delete-cell"></td>
+                                <td class="credit-hours-cell center" colspan="2">Total Credit Hours = 15</td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="semester">
+                        <h2 class="semester-heading">sixth semester</h2>
+                    </div>
+                    <div class="course-table">
+                        <table class="table">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                                <th>Credit Hours</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/502.pdf" download>MATH 502</a></td>
+                                <td>Analysis - II</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/504.pdf" download>MATH 504</a></td>
+                                <td>Computer Algebra</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="./Course Outlines/506.pdf" download>MATH 506</a></td>
+                                <td>Numerical Analysis - II</td>
+                                <td>2+1</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="./Course Outlines/508.pdf" download>MATH 508</a></td>
+                                <td>Applicable Differential Geometry - II</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="./Course Outlines/510.pdf" download>MATH 510</a></td>
+                                <td>Methods of Mathematical Physics - II</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="last-row">
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell"></td>
+                                <td class="hidden-cell delete-cell"></td>
+                                <td class="credit-hours-cell center" colspan="2">Total Credit Hours = 15</td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="total">
+                        <p class="total-Courses"> Total Number of Courses = 8</p>
+                        <p class="total-hours">Total Number of Credit hours = 24</p>
+                    </div>
+                </div>
+                <div class="course-wrapper">
+                    <div class="sub-headings">
+                        <div class="center">
+                            <h1 class="year-heading">fourth year Course's</h1>
+                        </div>
+                        <div>
+                            <h2 class="fourth-year-headings">PURE MATHEMATICS (only)</h2>
+                            <p class="course-type center">
+                                <span>
+                                    COMPULSORY COURSES
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table fourth-year-tables">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/601.pdf" download>MATH 601</a></td>
+                                <td>Abstract Algebra</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/602.pdf" download>MATH 602</a></td>
+                                <td>Galois Theory and its Applications</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="./Course Outlines/605.pdf" download>MATH 605</a></td>
+                                <td>Measure Theory-I</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="./Course Outlines/606.pdf" download>MATH 606</a></td>
+                                <td>Measure Theory-II</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="./Course Outlines/611.pdf" download>MATH 611</a></td>
+                                <td>Functional Analysis-I</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href="./Course Outlines/612.pdf" download>MATH 612</a></td>
+                                <td>Functional Analysis-II</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sub-headings">
+                        <div>
+                            <p class="course-type center">
+                                <span>
+                                    OPTIONAL COURSES
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table fourth-year-tables">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/603.pdf" download>MATH 603</a></td>
+                                <td>Commutative Ring</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/604.pdf" download>MATH 604</a></td>
+                                <td>Field Theory</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="./Course Outlines/615.pdf" download>MATH 615</a></td>
+                                <td>Summability Theory-I</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="./Course Outlines/616.pdf" download>MATH 616</a></td>
+                                <td>Summability Theory-II</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="./Course Outlines/621.pdf" download>MATH 621</a></td>
+                                <td>Algebraic Topology-I</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href="./Course Outlines/622.pdf" download>MATH 622</a></td>
+                                <td>Algebraic Topology-II</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>MATH 625</td>
+                                <td>Abelian Groups-I</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="course-wrapper">
+                    <div class="sub-headings">
+                        <div class="center">
+                            <h1 class="year-heading">fourth year Course's</h1>
+                        </div>
+                        <div>
+                            <h2 class="fourth-year-headings">APPLIED  MATHEMATICS (only)</h2>
+                            <p class="course-type center">
+                                <span>
+                                    COMPULSORY COURSES
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table fourth-year-tables">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/651.pdf" download>MATH 651</a></td>
+                                <td>Classical Mechanics</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/655.pdf" download>MATH 655</a></td>
+                                <td>Fluid Dynamics</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sub-headings">
+                        <div>
+                            <p class="course-type center">
+                                <span>
+                                    OPTIONAL COURSES
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table fourth-year-tables">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="./Course Outlines/611.pdf" download>MATH 611</a></td>
+                                <td>Functional Analysis-I</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="./Course Outlines/612.pdf" download>MATH 612</a></td>
+                                <td>Functional Analysis-II</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="./Course Outlines/661.pdf" download>MATH 661</a></td>
+                                <td>Electromagnetics-I</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="./Course Outlines/662.pdf" download>MATH 662</a></td>
+                                <td>Electromagnetics-II</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="./Course Outlines/665.pdf" download>MATH 665</a></td>
+                                <td>Quantum Mechanics-I</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href="./Course Outlines/666.pdf" download>MATH 666</a></td>
+                                <td>Quantum Mechanics-II</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>MATH 671</td>
+                                <td>Relativity-I</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>MATH 672</td>
+                                <td>Relativity-II</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>MATH 685</td>
+                                <td>Astronomy-I</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>MATH 686</td>
+                                <td>Astronomy-II</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="course-wrapper">
+                    <div class="sub-headings">
+                        <div class="center">
+                            <h1 class="year-heading">fourth year Course's</h1>
+                        </div>
+                        <div>
+                            <h2 class="fourth-year-headings">APPLIED and pure  MATHEMATICS (both) </h2>
+                            <p class="course-type center">
+                                <span>
+                                    OPTIONAL  COURSES
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="course-table">
+                        <table class="table fourth-year-tables">
+                            <tr>
+                                <th>Sr.No. </th>
+                                <th>Course No. </th>
+                                <th>Course Title</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>MATH 631</td>
+                                <td>Numerical Analysis-I</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>MATH 632</td>
+                                <td>Numerical Analysis-II</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="./Course Outlines/633.pdf" download>MATH 633</a></td>
+                                <td>Mathematical Statistics-I</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="./Course Outlines/634.pdf" download>MATH 634 </a></td>
+                                <td>Mathematical Statistics-II</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>MATH 637</td>
+                                <td>Applied Algebra-I</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>MATH 638</td>
+                                <td>Applied Algebra-II</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a href="./Course Outlines/643.pdf" download>MATH 643</a></td>
+                                <td>Complex Analysis-I</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><a href="./Course Outlines/644.pdf" download>MATH 644</a></td>
+                                <td>Complex Analysis-II</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><a href="./Course Outlines/645.pdf" download>MATH 645</a></td>
+                                <td>Operations Research-I</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><a href="./Course Outlines/646.pdf" download>MATH 646</a></td>
+                                <td>Operations Research-II</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><a href="./Course Outlines/647.pdf" download>MATH 647</a></td>
+                                <td>Projective Geometry-I</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><a href="./Course Outlines/648.pdf" download    >MATH 648</a></td>
+                                <td>Projective Geometry-II</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>MATH 649</td>
+                                <td>Stochastics Processes</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>MATH 650</td>
+                                <td>Renewal Processes and Theory of Queues</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>MATH 653</td>
+                                <td>Integral Equations</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>MATH 654</td>
+                                <td>Partial Differential Equations</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>MATH 657</td>
+                                <td>Nonlinear Systems-I</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>MATH 658</td>
+                                <td>Nonlinear Systems-II</td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>MATH 663</td>
+                                <td>Software Engineering</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>MATH 663</td>
+                                <td>Software Programming and Analysis</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="row flex  justify-evenly">
+            <div class="footer-col mission-col ">
+                <h4>mathematics</h4>
+                <p class="misson-footer-para">
+                    The mission of the department is to serve the country and wider international community in the
+                    development and communication of Mathematics through high quality research, publication and training
+                    at both undergraduate and postgraduate levels..
+                </p>
+            </div>
+            <div class="footer-links-wrapper flex justify-between">
+
+
+                <div class="footer-col footer-link">
+                    <h4>quick link</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">libary</a></li>
+                        <li><a href="#">download book</a></li>
+                        <li><a href="#">another link</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col footer-link">
+                    <h4>contact us</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-col footer-social-link">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright center">
+            <p> &copy; Copyrights Department of Mathematics. All rights reserved.</p>
+            <p>Designed &amp; Developed by <a href="https://www.facebook.com/Zeeehope" target="_blank">Zeeshan Shabbir</a>
+            </p>
+        </div>
+
+    </footer>
+    <script src="./libaries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./libaries/aos-master/dist/aos.js"></script>
+    <script src="./jss/nav.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 100,
+            duration: 1000,
+            startEvent: 'load',
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            if ($(window).width() <= 850) {
+                $(".delete-cell").remove()
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ku-logo.png" type="image/icon type">
+    <link rel="stylesheet" href="./libaries/fontawesome-free-5.15.3-web/css/all.css">
+    
+    <!-- aos -->
+    <link rel="stylesheet" href="./libaries/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="./libaries/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./libaries/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utlities.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Department of Mathematics - University of Karachi</title>    
+    <style>
+        .owl-carousel {
+            width: 100%;
+            height: 50vh;
+            margin-top: 30px;
+        }
+        .owl-prev,.owl-next  {
+            top: 30%;
+        }
+        .item {
+            height: 200px !important;
+        }
+        .gallerys {
+            max-width: 20px 0px;
+        }
+
+        .gallerys-link {
+            height: 300px;
+        }
+
+        .gallery-heading h1 {
+            margin-top: 50px;
+
+        }
+        .lab-gallery{
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+
+    <header class="header capitalize " id="top">
+
+        <div class="container-100 fixed containerfixed">
+            <div id="Sidenav" class="sidenav">
+                <a class="closebtn">
+                    <i class="fas fa-times"></i>
+                </a>
+
+                <ul class="sidenav-list">
+                    <li class="side-item">
+                        <a href="./index.html" class="side-link ">home</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./result.html" class="side-link">results</a>
+                    </li>
+                    <li class="side-item dropdown ">
+                        <a href="javascript:void(0)" class="side-link"><span class="program-nav">programs</span> <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="./program.html">B.S In Financial Mathematics</a></li>
+                                <li><a href="./program.html">B.S In Computational Mathematics</a></li>
+                                <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                            </ul>
+                        
+
+                    </li>
+                    <li class="side-item">
+                        <a href="./faculty.html" class="side-link">faculty</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./news.html" class="side-link ">News</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./events.html" class="side-link">Events</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./gallery.html" class="side-link active">Gallery</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./contact.html" class="side-link">contact/staff</a>
+                    </li>
+
+                </ul>
+                <div class="footer-col footer-social-link" id="side-social-list">
+                    <h4 class="side-follow">follow us</h4>
+                    <div class="social-links" id="side-social">
+                        <a href="https://www.facebook.com/groups/416373102043603/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="navcontainer">
+                <nav class="navbar flex align-center justify-between  ">
+                    <button type="button" id="mobile-nav-toggle">
+                        <i class="fas fa-bars" id="navtext"></i>
+                    </button>
+                    <div class="mathlogo uppercase flex align-center">
+                        <a href="https://www.uok.edu.pk/" target="_blank" class="logo-link ">
+                            <img src=".//ku-logo.png" alt="ku-logo" width="85px">
+                        </a>
+                        <span>Department of <br> <b class="math-logo-text">mathematics</b></span>
+                    </div>
+                    <div id="navbar-collapse">
+                        <ul class="navbar-nav flex">
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./index.html">home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./news.html">news</a>
+                            </li>
+                            <li class="nav-item dropdown" >
+                                <a class="nav-link" href="javascript:void(0)"><span class="program-nav">programs</span>
+                                    <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                                <ul class="dropdown-content">
+                                    <li><a href="#fm">B.S In Financial Mathematics</a></li>
+                                    <li><a href="#cm">B.S In Computational Mathematics</a></li>
+                                    <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./faculty.html">faculty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./result.html">result</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./events.html">events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./gallery.html">gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">contact/staff</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="back-to-top ">
+                <a href="#top" class="back-to-top-link">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
+            </div>
+            <div class="go-to-bottom">
+                <a href="#bottom" class="go-to-bottom-link">
+                    <i class="fas fa-arrow-circle-down"></i>
+                </a>
+            </div>
+            <div class="progress-container">
+                <div class="progress" id="myBar"></div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="gallerys" data-aos="fade-up">
+        <div class="gallery-heading center">
+            <h1>department photos</h1>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            <div class="item"><a href="./images/department/IMGP0028.jpg" class="gallerys-link"><img src="./images/department/IMGP0028.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0029.jpg" class="gallerys-link"><img src="./images/department/IMGP0029.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0030.jpg" class="gallerys-link"><img src="./images/department/IMGP0030.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0036.jpg" class="gallerys-link"><img src="./images/department/IMGP0036.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0037.jpg" class="gallerys-link"><img src="./images/department/IMGP0037.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0042.jpg" class="gallerys-link"><img src="./images/department/IMGP0042.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0043.jpg" class="gallerys-link"><img src="./images/department/IMGP0043.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0044.jpg" class="gallerys-link"><img src="./images/department/IMGP0044.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0045.jpg" class="gallerys-link"><img src="./images/department/IMGP0045.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0046.jpg" class="gallerys-link"><img src="./images/department/IMGP0046.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0048.jpg" class="gallerys-link"><img src="./images/department/IMGP0048.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0049.jpg" class="gallerys-link"><img src="./images/department/IMGP0049.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0050.jpg" class="gallerys-link"><img src="./images/department/IMGP0050.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0051.jpg" class="gallerys-link"><img src="./images/department/IMGP0051.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0053.jpg" class="gallerys-link"><img src="./images/department/IMGP0053.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0054.jpg" class="gallerys-link"><img src="./images/department/IMGP0054.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0055.jpg" class="gallerys-link"><img src="./images/department/IMGP0055.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/department/IMGP0056.jpg" class="gallerys-link"><img src="./images/department/IMGP0056.jpg" width="100%" height="100%" alt=""></a></div>
+            
+
+        </div>
+    </div>
+    <div class="gallerys" data-aos="fade-up">
+        <div class="gallery-heading center">
+            <h1>Orientation 2019</h1>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            <div class="item"><a href="./images/Orientation 2019/IMG-20190204-WA0015.jpg" class="gallerys-link"><img src="./images/Orientation 2019/IMG-20190204-WA0015.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/Orientation 2019/IMG-20190204-WA0020.jpg" class="gallerys-link"><img src="./images/Orientation 2019/IMG-20190204-WA0020.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/Orientation 2019/IMG-20190204-WA0021.jpg" class="gallerys-link"><img src="./images/Orientation 2019/IMG-20190204-WA0021.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/Orientation 2019/IMG-20190204-WA0022.jpg" class="gallerys-link"><img src="./images/Orientation 2019/IMG-20190204-WA0022.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/Orientation 2019/IMG-20190204-WA0024.jpg" class="gallerys-link"><img src="./images/Orientation 2019/IMG-20190204-WA0024.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/Orientation 2019/IMG-20190204-WA0027.jpg" class="gallerys-link"><img src="./images/Orientation 2019/IMG-20190204-WA0027.jpg" width="100%" height="100%" alt=""></a></div>
+          
+
+
+        </div>
+    </div>
+    <div class="lab-gallery gallerys" data-aos="fade-up">
+        <div class="gallery-heading center">
+            <h1>lab photos</h1>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            <div class="item"><a href="./images/computer_lab/Library 1.jpg" class="gallerys-link"><img src="./images/computer_lab/Library 1.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/computer_lab/Library 2.jpg" class="gallerys-link"><img src="./images/computer_lab/Library 2.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/computer_lab/Library 3.jpg" class="gallerys-link"><img src="./images/computer_lab/Library 3.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/computer_lab/P3060139.jpg" class="gallerys-link"><img src="./images/computer_lab/P3060139.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/computer_lab/P3060140.jpg" class="gallerys-link"><img src="./images/computer_lab/P3060140.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/computer_lab/P3060141.jpg" class="gallerys-link"><img src="./images/computer_lab/P3060141.jpg" width="100%" height="100%" alt=""></a></div>
+            <div class="item"><a href="./images/computer_lab/P3060143.jpg" class="gallerys-link"><img src="./images/computer_lab/P3060143.jpg" width="100%" height="100%" alt=""></a></div>
+          
+
+
+        </div>
+    </div>
+ 
+
+    <footer class="footer">
+        <div class="row flex  justify-evenly">
+            <div class="footer-col mission-col ">
+                <h4>mathematics</h4>
+                <p class="misson-footer-para">
+                    The mission of the department is to serve the country and wider international community in the
+                    development and communication of Mathematics through high quality research, publication and training
+                    at both undergraduate and postgraduate levels..
+                </p>
+            </div>
+            <div class="footer-links-wrapper flex justify-between">
+
+
+                <div class="footer-col footer-link">
+                    <h4>quick link</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">libary</a></li>
+                        <li><a href="#">download book</a></li>
+                        <li><a href="#">another link</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col footer-link">
+                    <h4>contact us</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-col footer-social-link">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+  
+
+            <div class="copyright center">
+                <p > &copy; Copyrights Department of Mathematics. All rights reserved.</p>
+                <p>Designed &amp; Developed by <a href="https://www.facebook.com/Zeeehope" target="_blank">Zeeshan Shabbir</a>
+                </p>
+            </div>
+       
+    </footer>
+    <!-- header end here -->
+
+    <script src="./libaries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./libaries/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="./libaries/aos-master/dist/aos.js"></script>
+    <script src="./jss/nav.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 100,
+            duration: 1000,
+            startEvent: 'load',
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                dots: true,
+                autoplayspeed: 2000,
+                smartSpeed: 1500,
+                autoplayHoverPause: false,
+                responsive: {
+                    801:{
+                        items: 4,
+                        nav: true,
+                        dots: true,
+                    },
+                    800: {
+                        stagePadding: 10,
+                        items: 3,
+                        nav: false,
+                     
+                    },
+                    500: {
+                        stagePadding: 10,
+                        items: 2,
+                        nav: false,
+                       
+                    },
+                    0: {
+                        stagePadding: 10,
+                        items: 1,
+                        nav: false,
+                       
+                    },
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

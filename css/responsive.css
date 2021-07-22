@@ -1,0 +1,339 @@
+@media screen and (max-width:1150px){
+    .navcontainer{
+        max-width: 1000px;
+    }
+    .nav-link{
+       font-size: 20px;
+    }
+}
+@media screen and (max-width:1000px){
+    .navbar-nav{
+      display: none;
+       
+    }
+    #mobile-nav-toggle{
+        display: block;
+    }
+    .loader {
+        width: 100px;
+         height: 100px;
+    }
+    .dropdown-content{
+        position: static;
+        margin-left: 23px;
+        background-color: transparent !important;
+    }
+    .dropdown-content li a {
+        padding: 10px 0px;
+        color: white !important;
+        font-size: 20px !important;
+    }
+    .slide-content h1 {
+        font-size: 37px;
+    }
+    .news-list{
+        font-size: 14px;
+    }
+    .result-new{
+        right: 10px;
+    }
+    .faculty-person-box{
+        width: 100%;
+        margin: 5px 20px;
+
+    }
+    .row{
+        padding: 0px 10px;
+    }
+    #side-social-list{
+        width: 50%;
+    }
+    /* .footer-links-wrapper{
+        width: 360px;
+        
+    } */
+}
+@media screen and (max-width:800px){
+    .navcontainer{
+        max-width: 600px;
+    }
+    .loader {
+         left: 40% !important;
+    }
+    .dropdown-content li a {
+        font-size: 17px !important;
+    }
+    .slide-content h1 {
+        font-size: 30px;
+    }
+    .slide-content {
+        padding: 0 5%;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .news-list{
+        font-size: 20px;
+    }
+    .result-new{
+        right: 5px;
+    }
+    .news-heading, .result-heading, .guideline-heading{
+        display: block;
+        text-align: center;
+        margin-top: 10px;     
+    }
+    .overveiw-heading {
+        font-size: 25px;
+        margin: 20px 0px;
+
+    }
+    .faculty-heading, .counter-heading, .program-heading {
+        margin: 0px;
+    }
+    .news-side{
+        font-size: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .overveiw {
+        margin: auto;
+        width: 90%
+    }
+    .overveiw-p {
+        padding: 0px;
+        padding-top: 5px;
+      
+    }
+    .counter-box {
+        flex-direction: column;
+        margin: 0;
+    }
+    .counter-item{
+        width: 50%;
+        padding: 0px;
+        padding-top: 20px;
+        margin: 20px auto;
+        
+    }
+    .bs-fm{
+        flex-direction: column;
+        height: auto;
+    }
+    .bs-cm{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .cm-img, .fm-img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .fm-para, .cm-para {
+        padding: 8px 15px;
+    }
+    .fm-promo,.cm-promo{
+        margin-top: 50px;
+    }
+    .fm-heading,.cm-heading{
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: 85%;
+        text-align: right;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .mission-col {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .footer-link {
+        width: 50%;
+        padding: 7px 15px;
+        margin: 0;
+    }
+    .footer-links-wrapper{
+        width: 90%;
+        margin: auto;
+    }
+    .footer-social-link{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer-col{
+        border-right: none;
+        padding-right: 15px;
+     }
+    .footer-links-wrapper{
+        width: 90%;
+       margin-left: 60px;
+        
+    }
+    #side-social-list{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .back-to-top {
+        right: 25px;
+        bottom: 20px;
+    }
+    .go-to-bottom{
+        left: 25px;
+        bottom: 20px;
+
+    }
+    #side-social-list{
+        width: 100%;
+    }
+    .dropdown-content li a {
+        font-size: 15px !important;
+    }
+    .slide-content {
+        padding: 0 2%;
+    }
+    .slide-content h1 {
+        font-size: 24px;
+    }
+    .slide-content p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .slide-content button {
+        font-size: 17px;
+    }
+    .owl-dots span {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .owl-carousel {
+        height: 75vh;
+    }
+    .slide::before {    
+        height: 75vh;
+    }
+    .slide {
+        height: 75vh;
+    }
+  
+    .fm-heading,.cm-heading{
+        position: absolute;
+        top: 0;
+        left: 5px;
+        width: 95%;
+        font-size: 20px;
+    }
+    .footer-links-wrapper{
+       margin-left: 40px;      
+    }
+    .copyright p{
+        font-size: 14px;
+    }
+    .qualification-heading,.publication-heading{
+        font-size: 12px;
+    }
+    .name-heading{
+        font-size: 14px;
+} 
+}
+@media screen and (max-width:400px){
+    .mathlogo span{
+        font-size: 12px;
+    }
+    .dropdown-content li a {
+        font-size: 14px !important;
+        padding-left: 12px;
+    }
+    .counter-heading h1{
+        font-size: 25px;
+    }
+    .fm-heading,.cm-heading{
+        position: absolute;
+        top: 0;
+        left: 5px;
+        width: 95%;
+        font-size: 17px;
+    }
+    .fm-para, .cm-para {
+        padding: 0px 20px;
+        font-size: 14px;
+    }
+    .cm-img, .fm-img {
+        width: 90%;
+    }
+    .overveiw-p {
+        font-size: 14px;
+    }
+    .news-heading, .result-heading, .guideline-heading {
+       font-size: 17px;
+    }
+    .news-link, .result-link, .guideline-link {
+       font-size: 15px;
+    }
+    .result-new {
+        font-size: 14px;
+    }
+    .guideline-para {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .slide-content h1 {
+        font-size: 18px;
+    }
+    .slide-content p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .counter-item {
+        width: 90%;
+    }
+    .faculty-img {
+        height: 170px;
+        width: 170px;
+        padding: 7px;
+    }
+    .footer-col ul li a {
+        font-size: 13px;
+    }
+    .footer-links-wrapper{
+        width: 90%;
+       margin: auto;
+        
+    }
+    .copyright p {
+        font-size: 11px;
+    }
+    #side-social-list{
+        width: 100%;
+    }
+    .instructor-img {
+        width: 180px;
+        height: 180px;
+        margin: auto;
+        margin-top: 60px;
+    }
+    .instructor-wrapper{
+        margin: 0;
+        margin-left: auto !important;
+    }
+    .qualification-heading,.publication-heading{
+        font-size: 10px;
+    }
+    .name-heading{
+        font-size: 12px;
+    } 
+    ul.breadcrump-list {
+        margin-left: 20px;
+    }
+    .breadCrump-link,.breadCrump-name {
+        font-size: 12px;
+        padding: 0px;
+        padding-right: 5px;
+    }
+    
+ 
+}
+

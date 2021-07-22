@@ -1,0 +1,2816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ku-logo.png" type="image/icon type">
+    <!-- aos -->
+    <link rel="stylesheet" href="./libaries/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="./libaries/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utlities.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <title>Department of Mathematics - University of Karachi</title>    
+    <style>
+        .container-results {
+            margin: 30px 0px;
+        }
+
+        /* .message {
+            display: none;
+            padding: 10px 0px;
+            font-size: 30px;
+        } */
+        .main-filter {
+            padding-left: 10px;
+        }
+
+        .filter-feild {
+            width: 340px;
+            padding: 5px 0px;
+            border: 2px solid black;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+
+        .filter-option {
+            display: none;
+            margin-top: 15px;
+            padding-left: 10px;
+        }
+
+        .option-heading {
+            padding: 5px 0px;
+            font-size: 20px;
+        }
+
+        .option-link {
+            padding: 5px 0px;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+
+        .option-link:hover {
+            color: var(--primary);
+            padding-left: 20px;
+            transition: all .3s ease;
+            text-decoration: underline;
+        }
+
+        .option-item {
+            cursor: pointer;
+        }
+
+        .year-option {
+            font-weight: bolder;
+            font-size: 25px;
+        }
+
+        .filter-feild:focus {
+            border: 2px solid var(--primary);
+            transition: all .3s ease;
+
+        }
+
+        .result-search {
+            padding: 20px;
+            position: relative;
+            max-width: 1120px;
+            margin-right: 10px;
+        }
+
+        #search {
+            border-radius: 5px;
+            position: absolute;
+            top: 25px;
+            margin: 0;
+            padding: 11px 8px;
+
+        }
+
+        .search-feild {
+            font-size: 30px;
+        }
+
+        .result-heading h1 {
+            font-size: 40px;
+        }
+
+        /* .result-heading h1::first-letter {
+            font-size: 60px;
+        } */
+
+        .resultLink {
+            text-align: center;
+            padding: 30px 10px;
+            margin: 10px 5px;
+            width: 145px;
+            height: 120px;
+            background-color: white;
+            display: inline-block;
+            /* border: 2px solid black; */
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        }
+
+        .course-code {
+            color: #4caf50;
+            padding: 3px 5px;
+            border-radius: 2px;
+        }
+
+        .resultLink:hover {
+            color: var(--primary);
+            box-shadow: none;
+            transition: all .3s ease-out;
+        }
+
+        .fa-chevron-down {
+            padding-right: 20px;
+        }
+
+        .nav-link i.fa-chevron-down {
+            padding: 0px !important;
+        }
+
+        /* @media screen and (max-width:800px) {
+            .filter-feild,.search-feild{
+                width: 200px;
+            }
+        } */
+        /* @media screen and (max-width:1100px) {
+            .result-search {
+               justify-content: end;
+            }
+
+        }
+        @media screen and (max-width:800px) {
+            .result-search {
+                max-width: 500px;
+            }
+
+        }
+        @media screen and (max-width:600px) {
+            .result-search {
+                max-width: 300px;
+            }
+
+            } */
+            @media screen and (max-width:1140px) {
+            .result-search { 
+                max-width: 1000px;
+                margin: 0;
+                margin-right: 20px;
+            }
+
+        }
+            @media screen and (max-width:1000px) {
+                .result-search{
+                margin: 0;
+                margin-right: 20px;
+                max-width: 900px;
+            }
+
+        }
+
+        @media screen and (max-width:900px) {
+            .result-search {
+                width: 100%;
+                margin: 0;
+            }
+            .filter-feild {
+                width: 100%;
+                position: static;
+
+            }
+            .search-feild {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            #search-input {
+                width: 95%;
+            }
+
+            .result-search {
+                position: relative;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            section {
+                margin: 2rem 0;
+            }
+
+            /* .result-search {
+                    padding: 10px 0;
+                } */
+
+            .year-heading {
+                font-size: 15px;
+                margin: 10px 0;
+            }
+
+            .result-heading h1 {
+                font-size: 20px;
+            }
+
+            .semester-heading {
+                font-size: 20px;
+            }
+
+            .filter-feild {
+
+                margin: 0 10px;
+                padding: 7px 0px;
+                font-size: 20px;
+            }
+
+            .option-link {
+                font-size: 20px;
+                padding: 10px 0px 10px 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="loader"></div>
+    <header class="header capitalize " id="top">
+
+        <div class="container-100 fixed containerfixed">
+            <div id="Sidenav" class="sidenav">
+                <a class="closebtn">
+                    <i class="fas fa-times"></i>
+                </a>
+
+                <ul class="sidenav-list">
+                    <li class="side-item">
+                        <a href="./index.html" class="side-link ">home</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./result.html" class="side-link active">results</a>
+                    </li>
+                    <li class="side-item dropdown ">
+                        <a href="javascript:void(0)" class="side-link"><span class="program-nav">programs</span> <i
+                                class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="./program.html">B.S In Financial Mathematics</a></li>
+                            <li><a href="./program.html">B.S In Computational Mathematics</a></li>
+                            <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                            <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                            <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                            <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                        </ul>
+
+
+                    </li>
+                    <li class="side-item">
+                        <a href="./faculty.html" class="side-link">faculty</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./news.html" class="side-link ">News</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./events.html" class="side-link">Events</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./gallery.html" class="side-link">Gallery</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="./contact.html" class="side-link">contact/staff</a>
+                    </li>
+
+                </ul>
+                <div class="footer-col footer-social-link" id="side-social-list">
+                    <h4 class="side-follow">follow us</h4>
+                    <div class="social-links" id="side-social">
+                        <a href="https://www.facebook.com/groups/416373102043603/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="navcontainer">
+                <nav class="navbar flex align-center justify-between  ">
+                    <button type="button" id="mobile-nav-toggle">
+                        <i class="fas fa-bars" id="navtext"></i>
+                    </button>
+                    <div class="mathlogo uppercase flex align-center">
+                        <a href="https://www.uok.edu.pk/" target="_blank" class="logo-link ">
+                            <img src=".//ku-logo.png" alt="ku-logo" width="85px">
+                        </a>
+                        <span>Department of <br> <b class="math-logo-text">mathematics</b></span>
+                    </div>
+                    <div id="navbar-collapse">
+                        <ul class="navbar-nav flex">
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./index.html">home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="./news.html">news</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="javascript:void(0)"><span class="program-nav">programs</span>
+                                    <i class="fas fa-chevron-down" style="position: relative; top: 3px;"></i></a>
+                                <ul class="dropdown-content">
+                                    <li><a href="#fm">B.S In Financial Mathematics</a></li>
+                                    <li><a href="#cm">B.S In Computational Mathematics</a></li>
+                                    <li><a href="./program.html"> BSc. (Hons) In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">MSc. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">M.S./M.Phil. In Pure And Applied Mathematics</a></li>
+                                    <li><a href="./program.html">Ph.D. In Pure And Applied Mathematics</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./faculty.html">faculty</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="./result.html">result</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./events.html">events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./gallery.html">gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">contact/staff</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="back-to-top ">
+                <a href="#top" class="back-to-top-link">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
+            </div>
+            <div class="go-to-bottom">
+                <a href="#bottom" class="go-to-bottom-link">
+                    <i class="fas fa-arrow-circle-down"></i>
+                </a>
+            </div>
+            <div class="progress-container">
+                <div class="progress" id="myBar"></div>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- header end here -->
+
+
+    <!-- /////result's start here -->
+    <section class="result-sec capitalize">
+        <div class="container">
+            <div class="results-wrapper ">
+                <div class="result-heading center">
+                    <h1>
+                        RESULTS
+                    </h1>
+                </div>
+                <div class="result-search flex justify-between ">
+                    <div class="filter-feild">
+                        <div class="filter-heading flex justify-between align-center    ">
+                            <span class="main-filter">filter</span> <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-option">
+                            <ul class="option-list">
+                                <li class="option-item ">
+                                    <div class="option-heading year-filter flex justify-between align-center">
+                                        <span class="year-option">first year</span><i
+                                            class="fas fa-chevron-down semester-down"></i>
+                                    </div>
+                                    <div class="semester-option hide">
+                                        <a href="#first-year-2020" class="option-link">Year 2020</a>
+                                        <a href="#first-year-2019" class="option-link">Year 2019</a>
+
+                                    </div>
+                                </li>
+                                <li class="option-item ">
+                                    <div class="option-heading year-filter flex justify-between align-center">
+                                        <span class="year-option">second year</span><i
+                                            class="fas fa-chevron-down semester-down"></i>
+                                    </div>
+                                    <div class="semester-option hide">
+                                        <a href="#second-year-2020" class="option-link">Year 2020</a>
+                                        <a href="#second-year-2019" class="option-link">Year 2019</a>
+                                    </div>
+                                </li>
+                                <li class="option-item ">
+                                    <div class="option-heading year-filter flex justify-between align-center">
+                                        <span class="year-option">third year</span><i
+                                            class="fas fa-chevron-down semester-down"></i>
+                                    </div>
+                                    <div class="semester-option hide">
+                                        <a href="#third-year-2020" class="option-link">Year 2020</a>
+                                        <a href="#third-year-2019" class="option-link">Year 2019</a>
+                                    </div>
+                                </li>
+                                <li class="option-item ">
+                                    <div class="option-heading year-filter flex justify-between align-center">
+                                        <span class="year-option">fourth year</span><i
+                                            class="fas fa-chevron-down semester-down"></i>
+                                    </div>
+                                    <div class="semester-option hide">
+                                        <a href="#fourth-year-2020" class="option-link">Year 2020</a>
+                                        <a href="#fourth-year-2019" class="option-link">Year 2019</a>
+                                    </div>
+                                </li>
+                                <li class="option-item ">
+                                    <div class="option-heading year-filter flex justify-between align-center">
+                                        <span class="year-option">M.phill programs</span><i
+                                            class="fas fa-chevron-down semester-down"></i>
+                                    </div>
+                                    <div class="semester-option hide">
+                                        <a href="#M-phil-year-2020" class="option-link">Year 2020</a>
+                                        <a href="#M-phil-year-2019" class="option-link">Year 2019</a>
+                                    </div>
+                                </li>
+                                <li class="option-item ">
+                                    <div class="option-heading year-filter flex justify-between align-center">
+                                        <span class="year-option">Ph.d programs</span><i
+                                            class="fas fa-chevron-down semester-down"></i>
+                                    </div>
+                                    <div class="semester-option hide">
+                                        <a href="#phd-year-2020" class="option-link">Year 2020</a>
+                                        <a href="#phd-year-2019" class="option-link">Year 2019</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="search-feild">
+                        <input type="text" name="search-results" id="search-input" placeholder="Search Here..">
+                        <button id="search" class="btn"> <i class="fas fa-search"></i></button>
+                    </div>
+
+                </div>
+                <!-- (((((((((((((((((((nothing found in result )))))))))))))))))) -->
+                <!-- <div class="message">
+                    <p class="center">we're sorry Nothing Found :-( </p>
+                </div> -->
+                <div id="result-div" class="capitalize">
+                     <!-- __________________________________________first year 202 _________________________________________________ -->
+                     <div id="first-year-2021">
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">first year 2021</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <!-- second semester ****************** -->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Asif Iqbal 302 (S).pdf"
+                                    class="resultLink" download><strong>Mr.Asif Iqbal <span class="course-code">302
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/aghiza akram 302s.pdf"
+                                    class="resultLink" download><strong>Ms. aghiza akram <span class="course-code">302
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr. Muhammad Ayaz 302 (H).pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span class="course-code">302
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hadiqa Siddiqui 300.2.pdf"
+                                    class="resultLink" download><strong>Ms. Hadiqa Siddiqui <span
+                                            class="course-code">300.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Muhammad Aslam FM 304.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Aslam <span class="course-code">FM
+                                            304</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/sahar qaiser 302(S) Eve.pdf"
+                                    class="resultLink" download><strong>Mr. Sahar Qaiser <span
+                                            class="course-code">302(S) Eve</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Yusra Rizvi 300.2.pdf"
+                                    class="resultLink" download><strong>Ms.Yusra Rizvi <span
+                                            class="course-code">300.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Ateeq Razzak 302.pdf"
+                                    class="resultLink" download><strong>Ms. Ateeq Razzak <span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Bareerah Adeel 300.2.pdf"
+                                    class="resultLink" download><strong>Ms. Bareerah Adeel <span
+                                            class="course-code">300.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Daniyal ur rehman FM 302.pdf"
+                                    class="resultLink" download><strong>Mr. Daniyal ur rehman <span
+                                            class="course-code">FM 302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr Fozia 302.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr m imtiaz 302.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Imtiaz <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr Syeeda Sadiz Zia 302.pdf"
+                                    class="resultLink" download><strong>Dr Syeeda Sadiz Zia <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hafsa Jafree 302.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Jafree <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hina Saleem 302.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Saleem <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hina Zaheer 302.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Zaheer <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Jawad arshad cheema FM 304.pdf"
+                                    class="resultLink" download><strong>Mr. Jawad arshad cheema<span
+                                            class="course-code"> FM 304</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Najeb Alam 302.pdf"
+                                    class="resultLink" download><strong>Dr. Najeb Alam Khan<span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Najeeb Alam 302 (2).pdf"
+                                    class="resultLink" download><strong>Dr. Najeb Alam Khan<span class="course-code">302
+                                            (2)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Samreen Ahmed FM 302.pdf"
+                                    class="resultLink" download><strong>Ms. Samreen Ahmed <span class="course-code">FM
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Summayah Saadi 302.pdf"
+                                    class="resultLink" download><strong>Ms. Summayah Saadi <span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Talha Ahmad FM 306.pdf"
+                                    class="resultLink" download><strong>Mr. Talha Ahmad<span class="course-code">FM
+                                            306</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Tanveer Ahmed 302.pdf"
+                                    class="resultLink" download><strong>Mr. Tanveer Ahmed sidiqqi<span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Usman Qureshi 302.pdf"
+                                    class="resultLink" download><strong>Mr. Usman Qureshi <span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Sahar Qaisar 301.pdf"
+                                    class="resultLink" download><strong>Mr. Sahar Qaisar <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="container-results flex justify-evenly flexwrap">
+
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/JAC FM 303.pdf"
+                                    class="resultLink" download><strong>Mr. Jawwad Arshad Cheema<span
+                                            class="course-code">FM 303</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/areeba azam bajwa FM 307 G-2 (Eve).pdf"
+                                    class="resultLink" download><strong>Ms.areeba azam bajwa <span
+                                            class="course-code">FM 307 G-2 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/asif iqbal 301s (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. asif Iqbal <span class="course-code">301s
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/asif iqbal 301s.pdf"
+                                    class="resultLink" download><strong>Mr. asif Iqbal <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/asma rani 301s.pdf"
+                                    class="resultLink" download><strong>Ms. Asma Rani <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/atteeq raazak 301s.pdf"
+                                    class="resultLink" download><strong>Mr. Atteeq Razzak <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Waseem Ahmed Ansari 301.pdf"
+                                    class="resultLink" download><strong>Mr. Waseem Ahmed Ansari <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Dr fozia hanif 301.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/DR MA FM 301.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span class="course-code">FM
+                                            301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/DR syeda sadia zia 301.pdf"
+                                    class="resultLink" download><strong>Dr. Syeeda Sadia Zia <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Dr. Kamran Khan 300.1.pdf"
+                                    class="resultLink" download><strong>Dr. Kamran Khan <span
+                                            class="course-code">300.1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Dr.najeeb alam 301.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/hafsa ather jaffee 301s.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Ather jaffee <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/hina zaheer 301.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Zaheer <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/iqra abdul hameed 301s.pdf"
+                                    class="resultLink" download><strong>Ms. iqra abdul hameed <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/M aslam FM 303.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Aslam <span class="course-code">FM
+                                            303</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/jawwad cheema FM 303 G-1.pdf"
+                                    class="resultLink" download><strong>Mr. javeed Arshad Cheema <span
+                                            class="course-code">FM 303 G-1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m fahad FM 303.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Fahad <span class="course-code">FM
+                                            303 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m usman qureshi 301 supply.pdf"
+                                    class="resultLink" download><strong>Mr. M Usman Qureshi <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m usman qureshi 301 supply.pdf"
+                                    class="resultLink" download><strong>Mr. M Usman Qureshi <span
+                                            class="course-code">301 supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m usman qureshi 301s.pdf"
+                                    class="resultLink" download><strong>Mr. M Usman Qureshi <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/MZK 301.pdf" class="resultLink"
+                                    download><strong>Mr. M zubair Khan <span class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Mr m zubair CM STAT 301.pdf" class="resultLink"
+                                    download><strong>Mr. M zubair Khan <span class="course-code">CM STAT 301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/obaid altaf FM 305 G-1 (eve).pdf"
+                                    class="resultLink" download><strong>mr. obaid altaf <span class="course-code">FM 305
+                                            G-1 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/prof Dr.syed anwar ali  301 (h) G-1.pdf"
+                                    class="resultLink" download><strong>prof Dr.syed anwar ali <span
+                                            class="course-code">301 (h) G-1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Saeed Akbar 307.pdf"
+                                    class="resultLink" download><strong>Mr. Saeed Akbar <span
+                                            class="course-code">307</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/samreen ahmed FM 301.pdf"
+                                    class="resultLink" download><strong>Ms. Samreen Ahmed <span class="course-code">FM
+                                            301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Ms. Sumayya Saadi  FM 307.pdf"
+                                    class="resultLink" download><strong>Ms. Sumayya Saadi <span class="course-code">FM
+                                            307</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/wajiha riaz 301 (H).pdf"
+                                    class="resultLink" download><strong>Ms. wajiha riaz <span class="course-code">301
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/wajiha riaz 301s.pdf"
+                                    class="resultLink" download><strong>Ms. wajiha riaz <span class="course-code">301
+                                            (s)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Waseem Ahmed Ansari 301 (Eve) 2019.pdf"
+                                    class="resultLink" download><strong>Waseem Ahmed Ansari <span
+                                            class="course-code">301 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Ateeq Razzak 301s.pdf"
+                                    class="resultLink" download><strong>Mr. Ateeq Razzak <span class="course-code">301
+                                            (s)</span></strong></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- __________________________________________first year 2020 _________________________________________________ -->
+                    <div id="first-year-2020">
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">first year 2020</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <!-- second semester ****************** -->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Asif Iqbal 302 (S).pdf"
+                                    class="resultLink" download><strong>Mr.Asif Iqbal <span class="course-code">302
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/aghiza akram 302s.pdf"
+                                    class="resultLink" download><strong>Ms. aghiza akram <span class="course-code">302
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr. Muhammad Ayaz 302 (H).pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span class="course-code">302
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hadiqa Siddiqui 300.2.pdf"
+                                    class="resultLink" download><strong>Ms. Hadiqa Siddiqui <span
+                                            class="course-code">300.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Muhammad Aslam FM 304.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Aslam <span class="course-code">FM
+                                            304</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/sahar qaiser 302(S) Eve.pdf"
+                                    class="resultLink" download><strong>Mr. Sahar Qaiser <span
+                                            class="course-code">302(S) Eve</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Yusra Rizvi 300.2.pdf"
+                                    class="resultLink" download><strong>Ms.Yusra Rizvi <span
+                                            class="course-code">300.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Ateeq Razzak 302.pdf"
+                                    class="resultLink" download><strong>Ms. Ateeq Razzak <span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Bareerah Adeel 300.2.pdf"
+                                    class="resultLink" download><strong>Ms. Bareerah Adeel <span
+                                            class="course-code">300.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Daniyal ur rehman FM 302.pdf"
+                                    class="resultLink" download><strong>Mr. Daniyal ur rehman <span
+                                            class="course-code">FM 302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr Fozia 302.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr m imtiaz 302.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Imtiaz <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Dr Syeeda Sadiz Zia 302.pdf"
+                                    class="resultLink" download><strong>Dr Syeeda Sadiz Zia <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hafsa Jafree 302.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Jafree <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hina Saleem 302.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Saleem <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Hina Zaheer 302.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Zaheer <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Jawad arshad cheema FM 304.pdf"
+                                    class="resultLink" download><strong>Mr. Jawad arshad cheema<span
+                                            class="course-code"> FM 304</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Najeb Alam 302.pdf"
+                                    class="resultLink" download><strong>Dr. Najeb Alam Khan<span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Najeeb Alam 302 (2).pdf"
+                                    class="resultLink" download><strong>Dr. Najeb Alam Khan<span class="course-code">302
+                                            (2)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Samreen Ahmed FM 302.pdf"
+                                    class="resultLink" download><strong>Ms. Samreen Ahmed <span class="course-code">FM
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Summayah Saadi 302.pdf"
+                                    class="resultLink" download><strong>Ms. Summayah Saadi <span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Talha Ahmad FM 306.pdf"
+                                    class="resultLink" download><strong>Mr. Talha Ahmad<span class="course-code">FM
+                                            306</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Tanveer Ahmed 302.pdf"
+                                    class="resultLink" download><strong>Mr. Tanveer Ahmed sidiqqi<span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Usman Qureshi 302.pdf"
+                                    class="resultLink" download><strong>Mr. Usman Qureshi <span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 II/Sahar Qaisar 301.pdf"
+                                    class="resultLink" download><strong>Mr. Sahar Qaisar <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="container-results flex justify-evenly flexwrap">
+
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/JAC FM 303.pdf"
+                                    class="resultLink" download><strong>Mr. Jawwad Arshad Cheema<span
+                                            class="course-code">FM 303</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/areeba azam bajwa FM 307 G-2 (Eve).pdf"
+                                    class="resultLink" download><strong>Ms.areeba azam bajwa <span
+                                            class="course-code">FM 307 G-2 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/asif iqbal 301s (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. asif Iqbal <span class="course-code">301s
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/asif iqbal 301s.pdf"
+                                    class="resultLink" download><strong>Mr. asif Iqbal <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/asma rani 301s.pdf"
+                                    class="resultLink" download><strong>Ms. Asma Rani <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/atteeq raazak 301s.pdf"
+                                    class="resultLink" download><strong>Mr. Atteeq Razzak <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Waseem Ahmed Ansari 301.pdf"
+                                    class="resultLink" download><strong>Mr. Waseem Ahmed Ansari <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Dr fozia hanif 301.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/DR MA FM 301.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span class="course-code">FM
+                                            301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/DR syeda sadia zia 301.pdf"
+                                    class="resultLink" download><strong>Dr. Syeeda Sadia Zia <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Dr. Kamran Khan 300.1.pdf"
+                                    class="resultLink" download><strong>Dr. Kamran Khan <span
+                                            class="course-code">300.1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Dr.najeeb alam 301.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/hafsa ather jaffee 301s.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Ather jaffee <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/hina zaheer 301.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Zaheer <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/iqra abdul hameed 301s.pdf"
+                                    class="resultLink" download><strong>Ms. iqra abdul hameed <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/M aslam FM 303.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Aslam <span class="course-code">FM
+                                            303</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/jawwad cheema FM 303 G-1.pdf"
+                                    class="resultLink" download><strong>Mr. javeed Arshad Cheema <span
+                                            class="course-code">FM 303 G-1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m fahad FM 303.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Fahad <span class="course-code">FM
+                                            303 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m usman qureshi 301 supply.pdf"
+                                    class="resultLink" download><strong>Mr. M Usman Qureshi <span
+                                            class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m usman qureshi 301 supply.pdf"
+                                    class="resultLink" download><strong>Mr. M Usman Qureshi <span
+                                            class="course-code">301 supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/m usman qureshi 301s.pdf"
+                                    class="resultLink" download><strong>Mr. M Usman Qureshi <span
+                                            class="course-code">301s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/MZK 301.pdf" class="resultLink"
+                                    download><strong>Mr. M zubair Khan <span class="course-code">301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Mr m zubair CM STAT 301.pdf" class="resultLink"
+                                    download><strong>Mr. M zubair Khan <span class="course-code">CM STAT 301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/obaid altaf FM 305 G-1 (eve).pdf"
+                                    class="resultLink" download><strong>mr. obaid altaf <span class="course-code">FM 305
+                                            G-1 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/prof Dr.syed anwar ali  301 (h) G-1.pdf"
+                                    class="resultLink" download><strong>prof Dr.syed anwar ali <span
+                                            class="course-code">301 (h) G-1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Saeed Akbar 307.pdf"
+                                    class="resultLink" download><strong>Mr. Saeed Akbar <span
+                                            class="course-code">307</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/samreen ahmed FM 301.pdf"
+                                    class="resultLink" download><strong>Ms. Samreen Ahmed <span class="course-code">FM
+                                            301</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Ms. Sumayya Saadi  FM 307.pdf"
+                                    class="resultLink" download><strong>Ms. Sumayya Saadi <span class="course-code">FM
+                                            307</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/wajiha riaz 301 (H).pdf"
+                                    class="resultLink" download><strong>Ms. wajiha riaz <span class="course-code">301
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/wajiha riaz 301s.pdf"
+                                    class="resultLink" download><strong>Ms. wajiha riaz <span class="course-code">301
+                                            (s)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Waseem Ahmed Ansari 301 (Eve) 2019.pdf"
+                                    class="resultLink" download><strong>Waseem Ahmed Ansari <span
+                                            class="course-code">301 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2020/Results 2020 I/Ateeq Razzak 301s.pdf"
+                                    class="resultLink" download><strong>Mr. Ateeq Razzak <span class="course-code">301
+                                            (s)</span></strong></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- __________________________________________ Second year 2020____________________________________________ -->
+                    <div id="second-year-2020">
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">Second year 2020</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <!-- second semester ****************** -->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Asif Iqbal 402 (S).pdf"
+                                    class="resultLink" download><strong>Mr.Asif Iqbal <span class="course-code">402
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Dr. Ehtesham FM 404.pdf"
+                                    class="resultLink" download><strong>Dr. Ehtesham <span class="course-code">FM
+                                            404</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Dr. Khalid Ameen 400.2.pdf"
+                                    class="resultLink" download><strong>Dr. Khalid Ameen <span
+                                            class="course-code">400.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Muneeb ul hasan Fm 400.2.pdf"
+                                    class="resultLink" download><strong>Mr.Muneeb ul hasan <span class="course-code">FM
+                                            400.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Noor Fatima 402 (S).pdf"
+                                    class="resultLink" download><strong>Ms. Noor Fatima <span class="course-code">402
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/asma rani 402 (H).pdf"
+                                    class="resultLink" download><strong>Mr. Asma Rani <span class="course-code"> 402
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/aghzia akram 404.pdf"
+                                    class="resultLink" download><strong>Ms. aghzia akram <span class="course-code">404
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/aghiza akram 404.pdf"
+                                    class="resultLink" download><strong>Ms. aghzia akram <span class="course-code">404
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/aghiza akram 402s.pdf"
+                                    class="resultLink" download><strong>Ms. aghzia akram <span class="course-code">402s
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Dr m ishaq 400.2.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad ishaq <span class="course-code">400.2
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/hafsa ather 402(H).pdf"
+                                    class="resultLink" download><strong>ms. hafsa ather Jafree <span class="course-code">402(H)
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/m ali quershi FM 410.pdf"
+                                    class="resultLink" download><strong>mr. m ali Quershi<span class="course-code">FM 410
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Mr javed ansari 402 (Eve).pdf"
+                                    class="resultLink" download><strong>mr. javeed anarsi<span class="course-code">402 (Eve)
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/asif iqbal 402s (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. Asif Iqbal <span class="course-code">402s
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Areeb Qureshi FM 408.pdf"
+                                    class="resultLink" download><strong>Mr. Areeb Qureshi <span class="course-code">FM
+                                            408</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Areeba Azam 402.pdf"
+                                    class="resultLink" download><strong>Mr. Areeba Azam <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Dr. Tanveer 402.pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer ahmed Siddiqui <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Ateeq Razzak 402.pdf"
+                                    class="resultLink" download><strong>Mr. Ateeq Razzak <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Daniyal ur rehman 404.pdf"
+                                    class="resultLink" download><strong>Mr. Daniyal ur rehman <span
+                                            class="course-code">404</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Fahad Manzoor 404.pdf"
+                                    class="resultLink" download><strong>Mr. Fahad Manzoor<span
+                                            class="course-code">404</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Hafsa ather 402.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa ather jaffee<span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Jawad haider 400.2.pdf"
+                                    class="resultLink" download><strong>Mr.Jawad haider <span
+                                            class="course-code">400.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Jibran Rahseed FM 410.pdf"
+                                    class="resultLink" download><strong>Mr.Jibran Rahseed <span class="course-code">FM
+                                            410</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Muhammad fahad 402.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad fahad <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Najeeb Alam 404.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">404</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Rahat Afshan 400.2.pdf"
+                                    class="resultLink" download><strong>Mr. Rahat Afshan <span
+                                            class="course-code">400.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Usman Quershi 402.pdf"
+                                    class="resultLink" download><strong>Mr. Usman Quershi <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Usman Qureshi 402 (2).pdf"
+                                    class="resultLink" download><strong>Mr. Usman Quershi <span class="course-code">402
+                                            (2)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Wajiha Riaz 402.pdf"
+                                    class="resultLink" download><strong>Ms. Wajiha Riaz <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Daniyal ur rehman 403.pdf"
+                                    class="resultLink" download><strong>Mr. Daniyal ur rehman <span
+                                            class="course-code">403</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 II/Dr. Muhammad Ayaz 403.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span
+                                            class="course-code">403</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Dr. Aziz Ur Rehman FM 400.1.rar"
+                                    class="resultLink" download><strong>Dr. Aziz Ur Rehman FM <span
+                                            class="course-code">FM
+                                            400.1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Hafsa 401.pdf"
+                                    class="resultLink" download><strong>Ms Hafsa Ather Jaffri <span
+                                            class="course-code">401</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/MAQ FM.409.pdf"
+                                    class="resultLink" download><strong>Mr.Muhammad Ali Qureshi<span
+                                            class="course-code">FM
+                                            409</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/MJA 401.pdf" class="resultLink"
+                                    download><strong>Mr. Javed Ansari<span
+                                            class="course-code">401(H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Muhammad Fahad 401.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Fahad<span
+                                            class="course-code">401(S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Muneeb ul hassan 400.1.pdf"
+                                    class="resultLink" download><strong>Mr. Muneeb ul hassan <span
+                                            class="course-code">400.1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/SaJ Al FM FM 400.1.pdf"
+                                    class="resultLink" download><strong>Mr. Sajjad Ali <span class="course-code">FM
+                                            400.1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/asif iqbal 401s (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. asif Iqbal <span class="course-code"> 401s
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/asma rani 401s.pdf"
+                                    class="resultLink" download><strong>Mr. Asma Rani <span class="course-code">
+                                            401s</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Dr ehtesham FM-403.pdf"
+                                    class="resultLink" download><strong>Dr. Ehtesham <span class="course-code">
+                                            FM-403</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Dr tanveer ahmed STAT-401 (S).pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed Siddiqui <span
+                                            class="course-code"> STAT-401 (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/fahad manzor FM 403.pdf"
+                                    class="resultLink" download><strong>Mr. Fahad manzor <span class="course-code"> FM
+                                            403</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/hammad zafar FM 407 (eve).pdf"
+                                    class="resultLink" download><strong>Mr. Hammad Zafar <span class="course-code"> FM
+                                            407 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/ijlal mansoor 401 (2).pdf"
+                                    class="resultLink" download><strong>Mr. Ijlal Mansoor <span class="course-code"> 401
+                                            (2) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/ijlal mansoor 401.pdf"
+                                    class="resultLink" download><strong>Mr. Ijlal Mansoor <span class="course-code"> 401
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/m usman qureshi 401s.pdf"
+                                    class="resultLink" download><strong>Mr. m Usman Qureshi <span class="course-code">
+                                            401s </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/seema idrees FM 405 (eve).pdf"
+                                    class="resultLink" download><strong>Ms. Seema Idrees<span class="course-code"> 405
+                                            (Eve) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/syed umaid ahmed FM 409 G-1.pdf"
+                                    class="resultLink" download><strong>Mr. Syed umaid ahmed <span class="course-code">
+                                            FM 409 G-1 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/wajiha riaz 401 (H).pdf"
+                                    class="resultLink" download><strong>Ms. wajiha riaz <span class="course-code"> 401
+                                            (H) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/waseem ahmed khan 401.pdf"
+                                    class="resultLink" download><strong>Ms. Waseem Ahmed Khan <span class="course-code">
+                                            401 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2020/Results 2020 I/Areeb Qureshi 407.pdf"
+                                    class="resultLink" download><strong>Ms. Areeb Qureshi <span class="course-code"> 407
+                                        </span></strong></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- __________________________________________ third year 2020____________________________________________ -->
+                    <div id="third-year-2020">
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">third year 2020</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <!-- second semester ****************** -->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/aghiza akram 506.pdf"
+                                    class="resultLink" download><strong>MS. aghiza akram <span class="course-code">506 
+                                            </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/aghiza akram MIBM 521.pdf"
+                                    class="resultLink" download><strong>MS. aghiza akram <span class="course-code">MIBM 521 
+                                            </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/asif iqbal 502 (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. asif iqbal <span class="course-code">502 
+                                            </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr Mushtaq ahmed 508 (Eve).pdf"
+                                    class="resultLink" download><strong>Dr Mushtaq ahmed  <span class="course-code">508 (Eve) 
+                                            </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr Mushtaq ahmed 508.pdf"
+                                    class="resultLink" download><strong>Dr Mushtaq ahmed  <span class="course-code">508 
+                                            </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr. Muhammad Ayaz 503 (H).pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span class="course-code">503
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr. Muhammad Ayaz 504 (Eve).pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span
+                                            class="course-code">504</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr fozia hanif 502.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span
+                                            class="course-code">502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr m ayaz 504 supply.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span class="course-code">504
+                                            supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr m ayaz 504.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz <span class="course-code">504
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr.asif raza 504 (Eve).pdf"
+                                    class="resultLink" download><strong>Dr. asif Raza <span class="course-code">504
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/waseem ahmed khan 510 supplymentary.pdf"
+                                    class="resultLink" download><strong>Mr. waseem ahmed khan <span
+                                            class="course-code">510 supp </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Ahmad Hassan 506.pdf"
+                                    class="resultLink" download><strong>Dr. Ahmad Hassan <span class="course-code">506
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Asif Raza 504.pdf"
+                                    class="resultLink" download><strong>Mr. Asif Raza <span class="course-code">504
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Ateeq Razzak 510.pdf"
+                                    class="resultLink" download><strong>Mr. Ateeq Razzak<span
+                                            class="course-code">510</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr Asif 502.pdf"
+                                    class="resultLink" download><strong>Dr Asif Raza Khan<span
+                                            class="course-code">502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr Fozia 510.pdf"
+                                    class="resultLink" download><strong>Dr Fozia Hanif<span
+                                            class="course-code">510</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr Saqib 506.pdf"
+                                    class="resultLink" download><strong>Dr Saqib ur Rehman<span
+                                            class="course-code">506</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Dr. Muhammad Ayaz 504.pdf"
+                                    class="resultLink" download><strong>Dr Muhammad Ayaz <span
+                                            class="course-code">504</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Hafsa Jafree 502.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Jafree <span
+                                            class="course-code">502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Javed Ansari 508 (H).pdf"
+                                    class="resultLink" download><strong>Mr. Javed Ansari <span class="course-code"> 508
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Javed Ansari 508.pdf"
+                                    class="resultLink" download><strong>Mr. Javed Ansari <span class="course-code">
+                                            508</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Najeeb Alam 504.pdf"
+                                    class="resultLink" download><strong>Dr. najeeb alam khan <span class="course-code">
+                                            504</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Saba naz 504.pdf"
+                                    class="resultLink" download><strong>Ms. Saba naz <span class="course-code">
+                                            504</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Samreen Ahmed 506.pdf"
+                                    class="resultLink" download><strong>Ms. Samreen Ahmed<span class="course-code">
+                                            506</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Tanveer 506.pdf"
+                                    class="resultLink" download><strong>Mr. Tanveer Ahmed sidiqqi<span
+                                            class="course-code"> 506</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Waseem Ahmed 510 (1).pdf"
+                                    class="resultLink" download><strong>Mr. Waseem Ahmed <span class="course-code"> 510
+                                            (1)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 II/Waseem Ahmed 510 (2).pdf"
+                                    class="resultLink" download><strong>Mr. Waseem Ahmed <span class="course-code"> 510
+                                            (2)</span></strong></a>
+                            </div>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Saeed Akbar 510.pdf"
+                                    class="resultLink" download><strong>Mr.Saeed Akbar <span
+                                            class="course-code">510</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/MJA 507.pdf" class="resultLink"
+                                    download><strong>Mr. javeed Ansari <span class="course-code">507</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/WAK 509.pdf" class="resultLink"
+                                    download><strong>Mr. Waseem Ahmed khan <span
+                                            class="course-code">509</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/atteeq razzak 509.pdf"
+                                    class="resultLink" download><strong>Mr. Ateeq Razzak <span
+                                            class="course-code">509</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr fozia hanif 509.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span
+                                            class="course-code">509</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr mushtaq ahmed 509(P).pdf"
+                                    class="resultLink" download><strong>Dr mushtaq ahmed<span
+                                            class="course-code">509(P)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr najeeb alam 501.pdf"
+                                    class="resultLink" download><strong>Dr Najeeb Alam Khan<span
+                                            class="course-code">501</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr tanveer ahmed MATH-506 (Eve) first semester.pdf"
+                                    class="resultLink" download><strong>Dr Tanveer Ahmed Siddiqui<span
+                                            class="course-code">506 (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr. m jameel 502 (H) eve.pdf"
+                                    class="resultLink" download><strong>Dr Muhammad jameel <span class="course-code">502
+                                            (H) Eve</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr. musthaq ahmed 507.pdf"
+                                    class="resultLink" download><strong>Dr. musthaq ahmed <span
+                                            class="course-code">507</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr.najeeb alam 503.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">503</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr.saqib ur rehman 505 (H).pdf"
+                                    class="resultLink" download><strong>Dr. Saqib ur rehman <span
+                                            class="course-code">505 (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/samreen ahmed 505(H).pdf"
+                                    class="resultLink" download><strong>Ms. Samreen Ahmed <span class="course-code">505
+                                            (H) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/summiya sadi 501.pdf"
+                                    class="resultLink" download><strong>Ms. Sumayya saadi <span class="course-code">501
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/syed ahmed hassan 505 (eve).pdf"
+                                    class="resultLink" download><strong>Mr. syed ahmed hassan <span
+                                            class="course-code">505 (Eve) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/syed ahmed hasssan 505 (Eve) supply.pdf"
+                                    class="resultLink" download><strong>Mr. syed ahmed hassan <span
+                                            class="course-code">505 (Eve) supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/waseem ahmed khan 509 supplymentary.pdf"
+                                    class="resultLink" download><strong>Mr.waseem ahmed khan <span
+                                            class="course-code">509 supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/waseem ahmed khan 509.pdf"
+                                    class="resultLink" download><strong>Mr.waseem ahmed khan <span
+                                            class="course-code">509 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Dr. Muhammad Ayaz 503 (H).pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ayaz<span class="course-code"> 503
+                                            (H) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2020/Results 2020 I/Najeeb alam 503.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb alam Khan<span class="course-code">
+                                            503 </span></strong></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- __________________________________________ fourth year 2020____________________________________________ -->
+                    <div id="fourth-year-2020">
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">fourth year 2020</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <!-- second semester ****************** -->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr m imtiaz 646.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Imtiaz <span
+                                            class="course-code">646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Asif Iqbal 624.pdf"
+                                    class="resultLink" download><strong>Dr. Asif Iqbal <span
+                                            class="course-code">624</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Ahmed Hassan 634.pdf"
+                                    class="resultLink" download><strong>Mr.Ahmed Hassan <span
+                                            class="course-code">634</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Asif Iqbal 638.pdf"
+                                    class="resultLink" download><strong>Dr. Asif Iqbal <span
+                                            class="course-code">638</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr. Syeeda Sadia Zia 648.pdf"
+                                    class="resultLink" download><strong>Dr. Syeeda Sadia Zia <span
+                                            class="course-code">648</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Noor Fatima 652.pdf"
+                                    class="resultLink" download><strong>Ms.Noor Fatima <span
+                                            class="course-code">652</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Usman Qureshi 606.pdf"
+                                    class="resultLink" download><strong>Mr.Usman Qureshi <span
+                                            class="course-code">606</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/AH 632.pdf" class="resultLink"
+                                    download><strong>Dr. syed Ahmed Hassan <span
+                                            class="course-code">632</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/asif iqbal 638 (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. asif iqbal <span class="course-code"> 638
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/DR SI 646.pdf"
+                                    class="resultLink" download><strong>Dr. syed Inayatullah <span class="course-code">
+                                            646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/m illyas 652 (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Ilyas<span class="course-code"> 652
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/syeeda sadia zia 612 supply.pdf"
+                                    class="resultLink" download><strong>Ms. syeda Sadia zia <span class="course-code">
+                                            612 supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Ahmad hassan 636.pdf"
+                                    class="resultLink" download><strong>Mr. Ahmad hassan <span class="course-code">
+                                            636</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Ateeq Razzak 652.pdf"
+                                    class="resultLink" download><strong>Mr. Ateeq Razzak <span class="course-code">
+                                            652</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr Fozia 646.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia hanif <span class="course-code">
+                                            646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr Fozia 652.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia hanif <span class="course-code">
+                                            652</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr Mushtaq 656.pdf"
+                                    class="resultLink" download><strong>Dr. mushtaq Ahmed <span class="course-code">
+                                            656</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr Saqib 620.pdf"
+                                    class="resultLink" download><strong>Dr. saqib ur rehman <span class="course-code">
+                                            620</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr Tanveer 656.pdf"
+                                    class="resultLink" download><strong>Dr. tanveer ahmed sidiqqi <span
+                                            class="course-code"> 656</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Dr. Syeeda Sadia Zia 612.pdf"
+                                    class="resultLink" download><strong>Dr. Syeeda Sadia Zia <span class="course-code">
+                                            612</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Javed Ansari 652.pdf"
+                                    class="resultLink" download><strong>mr. javeed anarsi<span class="course-code">
+                                            652</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/m javeed anarsi 652 (Eve).pdf"
+                                    class="resultLink" download><strong>mr. javeed anarsi<span class="course-code"> 652
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Muhammad Ilyas 652.pdf"
+                                    class="resultLink" download><strong>mr. Muhammad Ilyas<span class="course-code"> 652
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Tanveer Ahmed 628.pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed<span class="course-code"> 628
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Samreen Ahmad 632.pdf"
+                                    class="resultLink" download><strong>ms. Samreen Ahmad <span class="course-code"> 632
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Sikandar Shirazi 634.pdf"
+                                    class="resultLink" download><strong>syed Sikandar Shirazi <span class="course-code">
+                                            634</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Tanveer ahmed 634.pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed <span class="course-code">
+                                            634</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Tooba hameed 654.pdf"
+                                    class="resultLink" download><strong>Ms. tooba Hameed <span class="course-code">
+                                            654</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/tooba hameed 654 msc pre.pdf"
+                                    class="resultLink" download><strong>Ms. tooba Hameed Msc(pre)<span class="course-code">
+                                            654</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 II/Usman Qureshi 638.pdf"
+                                    class="resultLink" download><strong>Mr. Usman Qureshi <span class="course-code">
+                                            638</span></strong></a>
+                            </div>
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Hafsa 645.pdf"
+                                    class="resultLink" download><strong>Ms.Hafsa Ather Jaffri<span
+                                            class="course-code">645</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/SA 631.pdf" class="resultLink"
+                                    download><strong>Ms. Samreen Ahmed<span class="course-code">631</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/TA 633.pdf" class="resultLink"
+                                    download><strong>Mr. Tanveer Ahmed Siddiqui<span
+                                            class="course-code">631</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/AR 651.pdf" class="resultLink"
+                                    download><strong>Mr. Atteeq Raza<span class="course-code">651</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/asif iqbal 637 (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. asif Iqbal<span class="course-code">637
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/asif iqbal 637.pdf"
+                                    class="resultLink" download><strong>Mr. asif Iqbal<span class="course-code">637
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr fozia hanif 651.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia hanif <span class="course-code">651
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/DR mushtaq ahmed 651 supply.pdf"
+                                    class="resultLink" download><strong>Dr. mushtaq ahmed <span class="course-code">651
+                                            supp </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr mushtaq ahmed 655 (eve).pdf"
+                                    class="resultLink" download><strong>Dr. mushtaq ahmed <span class="course-code">655
+                                            (Eve) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr najeed alam 631.pdf"
+                                    class="resultLink" download><strong>Dr. najeed Alam Khan <span
+                                            class="course-code">631</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr syed Innaytullah 645 supply.pdf"
+                                    class="resultLink" download><strong>Dr syed Inayatullah <span
+                                            class="course-code">645 supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr syeda sadia zia 611.pdf"
+                                    class="resultLink" download><strong>Dr Syeda Sadia zia <span
+                                            class="course-code">611</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr. Tanveer a sidiqqi 653.pdf"
+                                    class="resultLink" download><strong>Dr tanveer ahmed Siddiqui<span
+                                            class="course-code">653</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr.najeeb alam 631.pdf"
+                                    class="resultLink" download><strong>Dr najeeb alam khan <span
+                                            class="course-code">631</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Dr.najeeb alam 645.pdf"
+                                    class="resultLink" download><strong>Dr najeeb alam khan <span
+                                            class="course-code">645</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/m illyas 651 G-2 (Repeaters) Eve.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Ilyas <span class="course-code">651
+                                            G-2 (Rep) Eve</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Javed Ansari 651.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad javeed anarsi <span
+                                            class="course-code">651</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/m javeed anarsi 661(H).pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad javeed anarsi <span
+                                            class="course-code">661 (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/noor fatima 651.pdf"
+                                    class="resultLink" download><strong>Ms. noor Fatima <span
+                                            class="course-code">651</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/syed innaytullah 645.pdf"
+                                    class="resultLink" download><strong>Mr. syed Inayatullah <span
+                                            class="course-code">645</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/syed sikandar 633 (Eve) supply.pdf"
+                                    class="resultLink" download><strong>Mr. syed sikandar <span class="course-code">633
+                                            (Eve) supp</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/syed sikandar 633 (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. syed sikandar <span class="course-code">633
+                                            (Eve) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/syeda sadia zia 647.pdf"
+                                    class="resultLink" download><strong>Ms. syeda Sadia zia <span
+                                            class="course-code">647</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Tooba Hameed 653.pdf"
+                                    class="resultLink" download><strong>Ms. Tooba Hameed<span
+                                            class="course-code">653</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/waseem ahmed khan 655 (2).pdf"
+                                    class="resultLink" download><strong>Mr. waseem ahmed khan <span
+                                            class="course-code">655 (2)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/waseem ahmed khan 655.pdf"
+                                    class="resultLink" download><strong>Mr. waseem ahmed khan <span
+                                            class="course-code">655</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/new/Dr najeeb alam CE 646.pdf"
+                                    class="resultLink" download><strong>Dr najeeb alam khan <span
+                                            class="course-code">CE 646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/new/Muhammad Ilyas 655.pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Ilyas <span
+                                            class="course-code">655</span></strong></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- ********************************************* year 2019***************************************** -->
+                    <!-- __________________________________________ first year 2019____________________________________________ -->
+                    <div id="first-year-2019">
+                        <!-- second semester ****************** -->
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">first year 2019</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Asif Iqbal 302(S).pdf" class="resultLink"
+                                    download><strong>Mr.Asif Iqbal <span class="course-code">302 (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Ms. Uzma Mazhar English Compulsory 300.2.pdf" class="resultLink"
+                                    download><strong>Mr. Uzma Mazhar <span class="course-code">300.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr. Fozia Hanif 302.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span class="course-code">302
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr. Muhammad Imtiaz 302 (H).pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Imtiaz <span
+                                            class="course-code">302 (H) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr. Najeeb Alam Khan 302 (S).pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">302 (S) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr. Najeeb Alam Khan 302.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr. Najeeb Alam Khan FM 304 G-2.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">304 G-2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr. Saba Naz 302.pdf" class="resultLink"
+                                    download><strong>Dr.Saba Naz <span class="course-code">302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr. Tanveer Ahmed Siddiqui 302 (S).pdf"
+                                    class="resultLink" download><strong>Dr.Tanveer Ahmed Siddiqui <span
+                                            class="course-code">302 (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Results 2019 II/Dr.Khurram Iqbal FM 304.pdf"
+                                    class="resultLink" download><strong>Dr.Khurram Iqbal <span class="course-code"> FM
+                                            304</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Dr.Sadia Zia 302H.pdf"
+                                    class="resultLink" download><strong>Dr.Sadia Zia <span class="course-code"> 302
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Dr.Syed Anwar Ali 302.pdf"
+                                    class="resultLink" download><strong>Dr.Syed Anwar Ali <span class="course-code"> 302
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Hammad Zafar FM 308.pdf"
+                                    class="resultLink" download><strong>Mr.Hammad Zafa <span class="course-code"> FM 308
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Mr. Ijlal Mansoor 302.pdf"
+                                    class="resultLink" download><strong>Mr.Ijlal Mansoor <span class="course-code"> 302
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Mr. Talha FM306.pdf"
+                                    class="resultLink" download><strong>Mr. Talha Ahmed Siddiqui <span
+                                            class="course-code"> FM 306 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Ms Nadia FM300.2.pdf"
+                                    class="resultLink" download><strong>Ms Nadia Naveed <span class="course-code"> FM
+                                            300.2 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Ms. Asma Rani 302 (S).pdf"
+                                    class="resultLink" download><strong>Ms. Asma Rani <span class="course-code">
+                                            300(S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/MS. Bareerah  FM-3002-G2.pdf"
+                                    class="resultLink" download><strong>Ms. Bareerah Adeel <span class="course-code"> FM
+                                            300.2 (eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Ms. Hafsa Athar 302 (S).pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Athar Jaffri <span
+                                            class="course-code">
+                                            300.2 (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Ms. Sahar Qaiser 302.pdf"
+                                    class="resultLink" download><strong>Ms. Sahar Qaiser <span class="course-code">
+                                            302</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/MS. Seema Idrees FM 306 G2.pdf"
+                                    class="resultLink" download><strong>Ms.Seema Idrees <span class="course-code"> FM
+                                            306
+                                            (eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Ms. Sharmen F.M 300.2.pdf"
+                                    class="resultLink" download><strong>Ms. Sharmen Ismail <span class="course-code"> FM
+                                            300.2 (eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Ms. Sumayya Saadi 302 S.pdf"
+                                    class="resultLink" download><strong>Ms. Sumayya Saadi <span class="course-code"> 302
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/MS. Tanzeela Yaqoob FM 304 .rar"
+                                    class="resultLink" download><strong>Ms. Tanzeela Yaqoob <span class="course-code">
+                                            FM
+                                            304 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Muhammad Usman Qureshi 302 (S).pdf"
+                                    class="resultLink" download><strong>M Usman Qureshi <span class="course-code">
+                                            302 (S) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Muhammad Usman Qureshi 302 (S) (1).pdf"
+                                    class="resultLink" download><strong>M Usman Qureshi <span class="course-code">
+                                            302 (S) (1) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Muhammad Usman Qureshi 302 (S) (2).pdf"
+                                    class="resultLink" download><strong>M Usman Qureshi <span class="course-code">
+                                            302 (S) (2) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Muhammad Usman Qureshi 302 (S) (3).pdf"
+                                    class="resultLink" download><strong>Mr.Muhammad Usman Qureshi<span
+                                            class="course-code"> 302 (S) (3) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Noor Fatima 302(S).pdf"
+                                    class="resultLink" download><strong>Ms.Noor Fatima <span class="course-code"> 302
+                                            (S) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Noor Ul Ain 302.pdf"
+                                    class="resultLink" download><strong>Ms.Noor Ul Ain <span class="course-code"> 302
+                                        </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Saeed Akbar FM 302.pdf"
+                                    class="resultLink" download><strong>Mr.Saeed Akbar <span class="course-code">FM 302
+                                            (eve) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/first year/Year 2019/Results 2019 II/Syeda Sabahat FM 308.pdf"
+                                    class="resultLink" download><strong>Ms.Syeda Sabahat <span class="course-code">FM
+                                            308 (eve) </span></strong></a>
+                            </div>
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+
+                        </div>
+                    </div>
+                    <!-- __________________________________________ second year 2019____________________________________________ -->
+                    <div id="second-year-2019">
+                        <!-- second semester ****************** -->
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">second year 2019</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Asif Iqbal 402(S) Mechanics.pdf"
+                                    class="resultLink" download><strong>Dr. Asif Iqbal <span
+                                            class="course-code">402(S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Ijlal Mansoor 402.pdf"
+                                    class="resultLink" download><strong>Mr. Ijlal Mansoor <span
+                                            class="course-code">402(S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Asif Iqbal 404.pdf"
+                                    class="resultLink" download><strong>Dr. Asif Iqbal <span
+                                            class="course-code">404</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Dr. Fozia Hanif 402.pdf"
+                                    class="resultLink" download><strong>Dr. Fozia Hanif <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Dr. Hina Zaheer 404.pdf"
+                                    class="resultLink" download><strong>Dr. Hina Zaheer<span
+                                            class="course-code">404</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Dr. Jawwad Haider 400.2 .rar"
+                                    class="resultLink" download><strong>Dr. Jawwad Haider<span
+                                            class="course-code">400.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Dr. Muhammad Ishaq 400.2.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Ishaq <span
+                                            class="course-code">400.2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Dr. Tanveer Ahmed Siddiqui 404 .rar"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed Siddiqui <span
+                                            class="course-code">404</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Dr.Tanveer 402(S).pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed Siddiqui <span
+                                            class="course-code">402(S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Kashan Majeed 402 (S).pdf"
+                                    class="resultLink" download><strong>Mr. Kashan Majeed <span
+                                            class="course-code">402(S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Atteeq Razzak 402 H.pdf"
+                                    class="resultLink" download><strong>Mr. Atteeq Razzak <span class="course-code">402
+                                            (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Atteeq Razzak 402.pdf"
+                                    class="resultLink" download><strong>Mr. Atteeq Razzak <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Daniyal ur Rehman 402.pdf"
+                                    class="resultLink" download><strong>Mr.Daniyal ur Rehman <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Javed 402.pdf"
+                                    class="resultLink" download><strong>Mr.Javed Ansari <span class="course-code">402
+                                            (1)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Javed Ansari 402.pdf"
+                                    class="resultLink" download><strong>Mr.Javed Ansari <span class="course-code">402
+                                            (2)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Waseem Ahmed Khan 402 (1).pdf"
+                                    class="resultLink" download><strong>Mr.Waseem Ahmed Khan <span
+                                            class="course-code">402 (1)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Mr. Waseem Ahmed Khan 402 (2).pdf"
+                                    class="resultLink" download><strong>Mr.Waseem Ahmed Khan <span
+                                            class="course-code">402 (2)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Ms. Asma Rani 402 (S).pdf"
+                                    class="resultLink" download><strong>Ms. Asma Rani <span class="course-code">402
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Ms. Asma Rani 402 (S) (1).pdf"
+                                    class="resultLink" download><strong>Ms. Asma Rani <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Ms. Sumayya Saadi 402.rar"
+                                    class="resultLink" download><strong>Ms.Sumayya Saadi <span
+                                            class="course-code">402</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Ms. Sumayya Saadi 402 (S).rar"
+                                    class="resultLink" download><strong>Ms.Sumayya Saadi <span class="course-code">402
+                                            (S)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/second year/Year 2019/Results 2019 II/Dr. Muhammad Ishaq 400.2 (2).pdf" class="resultLink" download><strong>Dr. Muhammad Ishaq <span class="course-code">400.2</span></strong></a>
+                            </div>
+
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <!-- <div class="">
+                                <a href="./results/fourth year/Year 2020/Results 2020 I/Ahmed Hassan 634.pdf"
+                                    class="resultLink" download><strong>Mr.Ahmed Hassan <span
+                                            class="course-code">634</span></strong></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- __________________________________________ third year 2019____________________________________________ -->
+                    <div id="third-year-2019">
+                        <!-- second semester ****************** -->
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">third year 2019</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Ahmed Hassan 506 1.pdf"
+                                    class="resultLink" download><strong>Dr. Syed Ahmed Hassan <span
+                                            class="course-code">506</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. M. Ayaz 504 (H) G1 & G2.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammadm Ayaz<span class="course-code">504
+                                            (H) G1 & G2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Muhammad Ayaz 544.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammadm Ayaz<span
+                                            class="course-code">544</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Mushtaq 508.pdf"
+                                    class="resultLink" download><strong>Dr. Mushtaq Ahmed<span class="course-code">508
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Mushtaq Ahmed 508.pdf"
+                                    class="resultLink" download><strong>Dr. Mushtaq Ahmed<span
+                                            class="course-code">508</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Saba Naz 508.pdf"
+                                    class="resultLink" download><strong>Dr. Saba Naz <span
+                                            class="course-code">508</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Saqib 506 (H).pdf"
+                                    class="resultLink" download><strong>Dr. Saqib Ur Rehman <span
+                                            class="course-code">506 (H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Saqib 506 P.pdf"
+                                    class="resultLink" download><strong>Dr. Saqib Ur Rehman <span
+                                            class="course-code">506 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Syed Ahmed Hassan 506.pdf"
+                                    class="resultLink" download><strong>Dr. Syed Ahmed Hassan <span
+                                            class="course-code">506 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Syed Inayat ullah 508.pdf"
+                                    class="resultLink" download><strong>Dr. Syed Inayat ullah <span
+                                            class="course-code">508</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr.Asif Raza Khan 502.pdf"
+                                    class="resultLink" download><strong>Dr.Asif Raza Khan <span
+                                            class="course-code">502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr.Ayaz 504(H).pdf"
+                                    class="resultLink" download><strong>Dr.Muhammadm Ayaz <span
+                                            class="course-code">504(H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Mr. Ateeq Razzak 510.pdf"
+                                    class="resultLink" download><strong>Mr. Atteeq Razzak <span
+                                            class="course-code">510(H)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Mr. Atteeq Razzak 510.pdf"
+                                    class="resultLink" download><strong>Mr. Atteeq Razzak <span
+                                            class="course-code">510</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Mr. Daniyal Ur Rehman 502.pdf"
+                                    class="resultLink" download><strong>Mr.Daniyal Ur Rehman <span
+                                            class="course-code">502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Mr. Javed 508.pdf"
+                                    class="resultLink" download><strong>Mr.Javed Ansari <span
+                                            class="course-code">508</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Mr. Javed Ansari 508.pdf"
+                                    class="resultLink" download><strong>Mr.Javed Ansari <span class="course-code">508
+                                            (Eve)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Mr. Javed Ansari 532 MIBM.pdf"
+                                    class="resultLink" download><strong>Mr.Javed Ansari <span class="course-code"> 532
+                                            MIBM</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Waseem Ahmed khan 510 (1).rar"
+                                    class="resultLink" download><strong>Mr.Waseem Ahmed khan <span
+                                            class="course-code">510 (1)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Waseem Ahmed khan 510 (2).rar"
+                                    class="resultLink" download><strong>Mr.Waseem Ahmed khan <span
+                                            class="course-code">510 (2)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Ms. Hafsa Athar 502.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Athar Jaffri<span
+                                            class="course-code">502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Ms. Hina Zaheer 502 PG-2.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Zaheer <span class="course-code"> 502
+                                            PG-2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Ms. Hina Zaheer 504 PG-2.pdf"
+                                    class="resultLink" download><strong>Ms. Hina Zaheer <span class="course-code"> 504
+                                            PG-2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Ms. Noor Fatima 510.pdf"
+                                    class="resultLink" download><strong>Ms.Noor Fatima <span class="course-code">
+                                            510</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Ms. Samreen Ahmed 504.pdf"
+                                    class="resultLink" download><strong>Ms.Samreen Ahmed <span class="course-code">
+                                            504</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Ms. Samreen Ahmed 506 (P).pdf"
+                                    class="resultLink" download><strong>Ms.Samreen Ahmed <span class="course-code"> 506
+                                            (P)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Muhammad Jamil 502.pdf"
+                                    class="resultLink" download><strong>Mr.Muhammad Jamil<span class="course-code">
+                                            502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Syed Sikandar Shirazi 502.pdf"
+                                    class="resultLink" download><strong>Ms.Syed Sikandar Shirazi <span
+                                            class="course-code"> 502</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Tanveer PIBM 540.pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed Siddiqui <span
+                                            class="course-code">PIBM 540</span></strong></a>
+                            </div>
+                        </div>
+
+                        <!--  ****************** first semester-->
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Najeeb Alam Khan 503.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam <span
+                                            class="course-code">503</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/third year/Year 2019/Results 2019 II/Dr. Tanveer 505.pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed Siddiqui <span
+                                            class="course-code">505</span></strong></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- __________________________________________ fourth year 2019____________________________________________ -->
+                    <div id="fourth-year-2019">
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">fourth year 2019</h1>
+                            </div>
+                            <div class="semester">
+                                <h2 class="semester-heading">second semester</h2>
+                            </div>
+                        </div>
+                        <!-- second semester ****************** -->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Atteq Razzak 652.pdf"
+                                    class="resultLink" download><strong>Mr. Atteq Razzak <span
+                                            class="course-code">654</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Muhammad Imtiaz 646.pdf"
+                                    class="resultLink" download><strong>Dr. Muhammad Imtiaz <span
+                                            class="course-code">646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Mushtaq 656.pdf"
+                                    class="resultLink" download><strong>Dr. Mushtaq Ahmed <span class="course-code">656
+                                            (Eve) </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Mushtaq Ahmed 656.pdf"
+                                    class="resultLink" download><strong>Dr. Mushtaq Ahmed <span
+                                            class="course-code">656</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Najeeb Alam 646.pdf"
+                                    class="resultLink" download><strong>Dr. Najeeb Alam Khan <span
+                                            class="course-code">646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Saba Naz 634.pdf"
+                                    class="resultLink" download><strong>Dr. Saba Naz <span
+                                            class="course-code">634</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Sadia Zia 648.pdf"
+                                    class="resultLink" download><strong>Dr. Syeda Sadia Zia <span
+                                            class="course-code">648</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Syed Inayatullah 646.rar"
+                                    class="resultLink" download><strong>Dr. Syed Inayatullah <span
+                                            class="course-code">646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Syeda Sadia Zia 612.pdf"
+                                    class="resultLink" download><strong>Dr. Syeda Sadia Zia <span
+                                            class="course-code">612</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr. Tanveer 634.pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed Siddiqui <span
+                                            class="course-code">634</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Dr.Tanveer 654.pdf"
+                                    class="resultLink" download><strong>Dr. Tanveer Ahmed Siddiqui <span
+                                            class="course-code">654</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Mr. Asif Iqbal 638 .rar"
+                                    class="resultLink" download><strong>Mr. Asif Iqbal <span
+                                            class="course-code">638</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Mr. Ateeq Razzak 656.pdf"
+                                    class="resultLink" download><strong>Mr. Ateeq Razzak <span
+                                            class="course-code">656</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Mr. Javed Ansari 652.rar"
+                                    class="resultLink" download><strong>Mr. Javed Ansari <span
+                                            class="course-code">652</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Mr. Javed Ansari 652.rar"
+                                    class="resultLink" download><strong>Mr. Javed Ansari <span
+                                            class="course-code">652</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Mr. Waseem Ahmed Khan 656 .rar"
+                                    class="resultLink" download><strong>Mr. Waseem Ahmed Khan <span
+                                            class="course-code">656</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Ms. Hafsa 646.pdf"
+                                    class="resultLink" download><strong>Ms. Hafsa Ather Jaffri <span
+                                            class="course-code">646</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Ms. Noor Fatima Siddiqui 632.pdf"
+                                    class="resultLink" download><strong>Ms. Noor Fatima Siddiqui <span
+                                            class="course-code">632</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Ms. Samreen Ahmed 602.pdf 632.pdf"
+                                    class="resultLink" download><strong>Ms.Samreen Ahmed <span
+                                            class="course-code">632</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Muhammad Ilyas 652 G-1.pdf"
+                                    class="resultLink" download><strong>Mr.Muhammad Ilyas <span class="course-code">652
+                                            G-1</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Muhammad Ilyas 652 G-2.pdf"
+                                    class="resultLink" download><strong>Mr.Muhammad Ilyas <span class="course-code">652
+                                            G-2</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Muhammad Ilyas 652 Repeaters.pdf"
+                                    class="resultLink" download><strong>M.Ilyas <span class="course-code">652
+                                            (Repeaters)</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Noor Fatima 652.pdf"
+                                    class="resultLink" download><strong>Ms. Noor Fatima Siddiqui <span
+                                            class="course-code">652 </span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Noor Fatima 656.pdf"
+                                    class="resultLink" download><strong>Ms. Noor Fatima Siddiqui <span
+                                            class="course-code">656</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Syed Sikandar Shirazi 634.pdf"
+                                    class="resultLink" download><strong>Ms. Syed Sikandar Shirazi <span
+                                            class="course-code">634</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Tooba Hameed 632.pdf"
+                                    class="resultLink" download><strong>Ms.Tooba Hameed <span
+                                            class="course-code">632</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 II/Tooba hameed 653.pdf"
+                                    class="resultLink" download><strong>Ms.Tooba Hameed <span
+                                            class="course-code">653</span></strong></a>
+                            </div>
+
+
+
+                        </div>
+                        <div class="semester">
+                            <h2 class="semester-heading">first semester</h2>
+                        </div>
+                        <!--  ****************** first semester-->
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 I/MR. Javed Ansari 651.pdf"
+                                    class="resultLink" download><strong>MR. Javed Ansari <span
+                                            class="course-code">651</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 I/Dr. Ahmed Hassan 631.pdf"
+                                    class="resultLink" download><strong>Dr. Ahmed Hassan <span
+                                            class="course-code">631</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 I/Dr. Ahmed Hassan 633.pdf"
+                                    class="resultLink" download><strong>Dr. Ahmed Hassan <span
+                                            class="course-code">633</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/fourth year/Year 2019/Results 2019 I/Muhammad Ilyas  655 (Eve).pdf"
+                                    class="resultLink" download><strong>Mr. Muhammad Ilyas  <span
+                                            class="course-code">655 (Eve)</span></strong></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- ********************************* Mphill  ********************************************* -->
+                    <div>
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">&nbsp  &nbsp M phil  &nbsp  &nbsp</h1>
+                            </div>
+                            <!-- -------------------year 2020 ****************** -->
+                            <div class="semester" id="M-phil-year-2020">
+                                <h2 class="semester-heading">year 2020</h2>
+                            </div>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/M phil/2020/Dr fozia hanif 721.pdf" class="resultLink" download><strong>Dr fozia hanif  <span class="course-code">721</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/M phil/2020/DR SAH 736.pdf" class="resultLink" download><strong>Dr syed ahmed hassan  <span class="course-code">736</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/M phil/2020/Dr. MA 702.pdf" class="resultLink" download><strong>Dr Muhammad ayaz <span class="course-code">702</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/M phil/2020/Dr. Saqib 733.pdf" class="resultLink" download><strong>Dr saqib ur rehman <span class="course-code">733</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/M phil/2020/MI 748.pdf" class="resultLink" download><strong>Dr Muhammad imtiaz <span class="course-code">748</span></strong></a>
+                            </div>
+
+                        </div>
+                        <!--  ****************** year 2019------------->
+                        <div class="semester" id="M-phil-year-2019">
+                            <h2 class="semester-heading">year 2019</h2>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/M phil/2019/Dr. Muhammad Imtiaz 747.pdf" class="resultLink" download><strong>Dr Muhammad Imtiaz <span
+                                         class="course-code">747</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/M phil/2019/Dr. Saqib 733.pdf" class="resultLink" download><strong>Dr saqib ur rehman  <span
+                                         class="course-code">733</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/M phil/2019/Dr. Syed Inayat ullah 753.pdf" class="resultLink" download><strong>Dr Syed Inayat ullah  <span
+                                         class="course-code">753</span></strong></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ********************************* P.hD ********************************************* -->
+                    <div>
+                        <div class="sub-headings">
+                            <div class="first-year center">
+                                <h1 class="year-heading">&nbsp  &nbsp P.hD  &nbsp  &nbsp</h1>
+                            </div>
+                            <!-- -------------------year 2020 ****************** -->
+                            <div class="semester" id="phd-year-2020">
+                                <h2 class="semester-heading">year 2020</h2>
+                            </div>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/Ph D/2020/DR tanveer Ahmed 808.pdf" class="resultLink" download><strong>Dr tanveer Ahmed <span class="course-code">808</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/Ph D/2020/Dr. Mushtaq 801.pdf" class="resultLink" download><strong>Dr Mushtaq Ahmed <span class="course-code">801</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/Ph D/2020/Dr. musthaq ahmed 802.pdf" class="resultLink" download><strong>Dr Mushtaq Ahmed <span class="course-code">802</span></strong></a>
+                            </div>
+                            <div class="">
+                                <a href="./results/Ph D/2020/Tanveer Ahmed 807.pdf" class="resultLink" download><strong>Dr tanveer Ahmed  <span class="course-code">807</span></strong></a>
+                            </div>
+
+                        </div>
+                        <!--  ****************** year 2019------------->
+                        <div class="semester" id="phd-year-2019">
+                            <h2 class="semester-heading">year 2019</h2>
+                        </div>
+                        <div class="container-results flex justify-evenly flexwrap">
+                            <div class="">
+                                <a href="./results/Ph D/2019/Dr. Tanvee 807.pdf"
+                                    class="resultLink" download><strong>Dr tanveer Ahmed <span
+                                            class="course-code">807</span></strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="row flex  justify-evenly">
+            <div class="footer-col mission-col ">
+                <h4>mathematics</h4>
+                <p class="misson-footer-para">
+                    The mission of the department is to serve the country and wider international community in the
+                    development and communication of Mathematics through high quality research, publication and training
+                    at both undergraduate and postgraduate levels..
+                </p>
+            </div>
+            <div class="footer-links-wrapper flex justify-between">
+
+
+                <div class="footer-col footer-link">
+                    <h4>quick link</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">libary</a></li>
+                        <li><a href="#">download book</a></li>
+                        <li><a href="#">another link</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col footer-link">
+                    <h4>contact us</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-col footer-social-link">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright center">
+            <p> &copy; Copyrights Department of Mathematics. All rights reserved.</p>
+            <p>Designed &amp; Developed by <a href="https://www.facebook.com/Zeeehope" target="_blank">Zeeshan
+                    Shabbir</a>
+            </p>
+        </div>
+
+    </footer>
+    <script src="./libaries/jquery/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./libaries/aos-master/dist/aos.js"></script> -->
+    <script src="./jss/nav.js"></script>
+    <script>
+        // AOS.init({
+        //     offset: 100,
+        //     delay: 100,
+        //     duration: 1000,
+        //     startEvent: 'load',
+
+        // });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".filter-heading").click(function () {
+                $(".filter-option").toggle()
+                $(this).find(".fa-chevron-down").toggleClass("fa-chevron-up");
+            })
+            $(".option-item").click(function () {
+                $(this).find(".fa-chevron-down").toggleClass("fa-chevron-up");
+                $(this).find(".semester-option").toggleClass("show")
+            })
+            $('#search').click(function () {
+              
+                var txt = $('#search-input').val();
+                if (txt == "") {
+                    // do nothing
+                    console.log("do nothing");
+
+
+                } else {
+                    $(".loader").show()
+                    $('.resultLink').hide()
+                    $('.container-results').removeClass("justify-evenly")
+                    $('.container-results').addClass("justify-center")
+                    $('.container-results').hide()
+                    $('.semester,.sub-headings').addClass("hide");
+                    $("#result-div").hide()
+                    $("footer").css('margin-top', '500px')
+
+                    setTimeout(() => {
+
+                        $('.resultLink').each(function () {
+                            if ($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) {
+                                var container = $(this).closest(".container-results")
+                                container.show()
+                                container.parent().find(".semester,.sub-headings").show();
+                                $(".loader").delay(1500).hide()
+                                $("#result-div").delay(1500).show()
+                                $("footer").delay(1500).css('margin-top', '0px')
+                                $(this).show()
+                                $('#search-input').val("");
+                                console.log(this);
+                            }
+                            else {
+                                $(".loader").delay(1500).hide()
+                                  $("footer").delay(1500).css('margin-top', '0px')
+                            }
+                        });
+
+                    }, 2000);
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>
